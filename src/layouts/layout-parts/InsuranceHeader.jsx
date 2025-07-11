@@ -58,15 +58,15 @@ const menus = [
     children: [],
   },
   {
-    name: "Trade",
+    name: "Table",
     url: "/table",
     children: [],
   },
-  {
-    name: "Tax",
-    url: "/tax-info",
-    children: [],
-  },
+  // {
+  //   name: "Tax",
+  //   url: "/tax-info",
+  //   children: [],
+  // },
 ];
 
 const StyledToolBar = styled(Toolbar)(({ theme }) => ({

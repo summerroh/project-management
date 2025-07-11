@@ -227,6 +227,7 @@ export default function ArticleList({ imageLink }) {
           <Button
             variant="contained"
             sx={{
+              width: "70px",
               height: "40px",
               backgroundColor: theme.palette.primary.darkBlue,
               "&:hover": {
@@ -234,7 +235,7 @@ export default function ArticleList({ imageLink }) {
               },
             }}
           >
-            검색
+            Search
           </Button>
         </FlexBox>
       </FlexBox>
@@ -297,7 +298,7 @@ export default function ArticleList({ imageLink }) {
                   color: theme.palette.primary.darkBlue,
                 }}
               >
-                최신순
+                Recent
               </H6>
             </Box>
 

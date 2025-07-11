@@ -17,11 +17,15 @@ import FlexBox from "components/flexbox/FlexBox";
 import FlexRowAlign from "components/flexbox/FlexRowAlign";
 import MySelect from "components/MySelect";
 import ReversePagination from "components/ReversePagination";
-import { ButtonText, H5, H6, Small } from "components/Typography";
+import { ButtonText, H5, H6, H8, Small } from "components/Typography";
 import { EllipsisVertical } from "lucide-react";
 import { useState } from "react";
 
-const events = [{ title: "예시 텍스트", start: new Date() }];
+const events = [
+  { title: "Sprint Planning Meeting", start: new Date() },
+  { title: "Code Review", start: new Date(Date.now() + 86400000) },
+  { title: "Deployment", start: new Date(Date.now() + 172800000) }
+];
 export default function DashboardContent() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -72,23 +76,23 @@ const Section1 = ({ selectedOption, setSelectedOption, theme }) => {
             <Grid item xs={12}>
               <MySelect
                 items={[
-                  "업무지시 (모든 업무 요청이나 피드백 등 업무 관련된 사항은 플로우로 공유합니다.)",
+                  "Project Dashboard",
                 ]}
                 width={"100%"}
                 height={"50px"}
                 placeholder={
-                  "업무지시 (모든 업무 요청이나 피드백 등 업무 관련된 사항은 플로우로 공유합니다.)"
+                  "Project Dashboard"
                 }
               />
             </Grid>
 
             <Grid item container xs={12} spacing={2}>
-              {/* First Row - Work Status */}
+              {/* First Row - Project Status */}
               <Grid item container xs={12} spacing={2}>
                 {[
-                  { label: "전체 업무", value: "7,500", percent: null },
-                  { label: "요청", value: "7,500", percent: "20%" },
-                  { label: "진행", value: "3,350", percent: "12%" },
+                  { label: "Total Issues", value: "7,500", percent: null },
+                  { label: "To Do", value: "7,500", percent: "20%" },
+                  { label: "In Progress", value: "3,350", percent: "12%" },
                 ].map((box, index) => (
                   <Grid item xs={12} sm={4} key={`violet-${index}`}>
                     <Box
@@ -132,9 +136,9 @@ const Section1 = ({ selectedOption, setSelectedOption, theme }) => {
               {/* Second Row - Additional Status */}
               <Grid item container xs={12} spacing={2}>
                 {[
-                  { label: "피드백", value: "24,350", percent: "59%" },
-                  { label: "완료", value: "54,050", percent: "5%" },
-                  { label: "보류", value: "50", percent: "4%" },
+                  { label: "Code Review", value: "24,350", percent: "59%" },
+                  { label: "Done", value: "54,050", percent: "5%" },
+                  { label: "Blocked", value: "50", percent: "4%" },
                 ].map((box, index) => (
                   <Grid item xs={12} sm={4} key={`blue-${index}`}>
                     <Box
@@ -173,12 +177,12 @@ const Section1 = ({ selectedOption, setSelectedOption, theme }) => {
                 ))}
               </Grid>
 
-              {/* Third Row - Performance */}
+              {/* Third Row - Sprint Metrics */}
               <Grid item container xs={12} spacing={2}>
                 {[
-                  { label: "전체 실적", value: "980,000,000원" },
-                  { label: "이번달 실적", value: "78,000,000원" },
-                  { label: "오늘 실적", value: "4,500,000원" },
+                  { label: "Sprint Completion", value: "85%" },
+                  { label: "Bug Resolution", value: "92%" },
+                  { label: "Team Velocity", value: "45 SP" },
                 ].map((box, index) => (
                   <Grid item xs={12} sm={4} key={`green-${index}`}>
                     <Box
@@ -232,10 +236,10 @@ const Section2 = ({ selectedOption, setSelectedOption, theme }) => {
               gap={2}
             >
               <MySelect
-                items={["공지사항 (모든 업 무요청이나 피드백)"]}
+                items={["Project Announcements"]}
                 width={"100%"}
                 height={"50px"}
-                placeholder={"공지사항 (모든 업 무요청이나 피드백)"}
+                placeholder={"Project Announcements"}
               />
               <Box
                 sx={{
@@ -250,7 +254,7 @@ const Section2 = ({ selectedOption, setSelectedOption, theme }) => {
               >
                 <Box sx={{ textAlign: "left" }}>
                   <FlexRowAlign gap={1} justifyContent={"space-between"}>
-                    <H5 mb={1}>(개인) 나만의 메모</H5>
+                    <ButtonText mb={1}>My Work Notes</ButtonText>
                     <Box sx={{ cursor: "pointer" }}>
                       <EllipsisVertical
                         size={20}
@@ -259,9 +263,9 @@ const Section2 = ({ selectedOption, setSelectedOption, theme }) => {
                     </Box>
                   </FlexRowAlign>
 
-                  <ButtonText>테스트</ButtonText>
-                  <ButtonText>테스트</ButtonText>
-                  <ButtonText>테스트</ButtonText>
+                  <Small>Backend API Development</Small><br/>
+                  <Small>Frontend UI Enhancement</Small><br/>
+                  <Small>Database Schema Design</Small>
                 </Box>
               </Box>
             </Grid>
@@ -278,39 +282,39 @@ const Section3 = ({ selectedOption, setSelectedOption, theme }) => {
 
   const tableData = [
     {
-      status: "진행",
-      company: "(주) 런드리고",
-      amount: "99,999,999원",
-      lastCall: "마지막 통화 10월 23일 오후 4시 30분",
-      consultation: "(상담 내역)",
+      status: "In Progress",
+      company: "User Authentication System",
+      amount: "High Priority",
+      lastCall: "Last updated Oct 23, 4:30 PM",
+      consultation: "(Development Progress: 75%)",
     },
     {
-      status: "진행",
-      company: "(주) 런드리고",
-      amount: "99,999,999원",
-      lastCall: "마지막 통화 10월 23일 오후 4시 30분",
-      consultation: "(상담 내역)",
+      status: "In Progress",
+      company: "Payment Module Integration",
+      amount: "Medium Priority",
+      lastCall: "Last updated Oct 22, 2:15 PM",
+      consultation: "(Development Progress: 60%)",
     },
     {
-      status: "진행",
-      company: "(주) 런드리고",
-      amount: "99,999,999원",
-      lastCall: "마지막 통화 10월 23일 오후 4시 30분",
-      consultation: "(상담 내역)",
+      status: "In Progress",
+      company: "Database Optimization",
+      amount: "Low Priority",
+      lastCall: "Last updated Oct 21, 1:45 PM",
+      consultation: "(Development Progress: 40%)",
     },
     {
-      status: "요청",
-      company: "(주) 런드리고",
-      amount: "99,999,999원",
-      lastCall: "마지막 통화 10월 23일 오후 4시 30분",
-      consultation: "(상담 내역)",
+      status: "To Do",
+      company: "Mobile App Development",
+      amount: "High Priority",
+      lastCall: "Last updated Oct 20, 3:20 PM",
+      consultation: "(Development Progress: 0%)",
     },
     {
-      status: "요청",
-      company: "(주) 런드리고",
-      amount: "99,999,999원",
-      lastCall: "마지막 통화 10월 23일 오후 4시 30분",
-      consultation: "(상담 내역)",
+      status: "To Do",
+      company: "API Documentation",
+      amount: "Medium Priority",
+      lastCall: "Last updated Oct 19, 5:10 PM",
+      consultation: "(Development Progress: 0%)",
     },
   ];
 
@@ -337,7 +341,7 @@ const Section3 = ({ selectedOption, setSelectedOption, theme }) => {
             }}
           >
             <FlexRowAlign
-              gap={1}
+              gap={2}
               mb={2}
               sx={{
                 justifyContent: "flex-start",
@@ -346,11 +350,12 @@ const Section3 = ({ selectedOption, setSelectedOption, theme }) => {
                 flexDirection: "row",
               }}
             >
-              <H6>내가 담당중인 경정청구</H6>
+              <H6>Assigned Projects</H6>
               <MySelect
-                items={["이번 주", "이번 달", "오늘"]}
-                height={"50px"}
-                placeholder={"이번 주"}
+                items={["This Week", "This Month", "Today"]}
+                height={"40px"}
+                width={"120px"}
+                placeholder={"This Week"}
               />
             </FlexRowAlign>
 
@@ -391,7 +396,7 @@ const Section3 = ({ selectedOption, setSelectedOption, theme }) => {
                   }}
                 >
                   <Tab
-                    label="업무"
+                    label="Issues"
                     sx={{
                       fontSize: 14.5,
                       color:
@@ -404,7 +409,7 @@ const Section3 = ({ selectedOption, setSelectedOption, theme }) => {
                     }}
                   />
                   <Tab
-                    label="지연된 업무 0"
+                    label="Overdue Issues 2"
                     sx={{
                       fontSize: 14.5,
                       color:
@@ -458,9 +463,9 @@ const Section3 = ({ selectedOption, setSelectedOption, theme }) => {
                                   height: 8,
                                   borderRadius: "50%",
                                   backgroundColor:
-                                    row.status === "진행"
+                                    row.status === "In Progress"
                                       ? theme.palette.primary.green
-                                      : row.status === "요청"
+                                      : row.status === "To Do"
                                       ? theme.palette.primary.main
                                       : "transparent",
                                 }}
@@ -504,19 +509,19 @@ const Section4 = ({ theme }) => {
 
   const scheduleData = [
     {
-      label: "연락 할 업체",
-      value: "80개",
-      type: "contact",
+      label: "Code Review Pending",
+      value: "8 items",
+      type: "review",
     },
     {
-      label: "방문 할 업체",
-      value: "12개",
-      type: "visit",
+      label: "Sprint Meeting",
+      value: "3 items",
+      type: "meeting",
     },
     {
-      label: "상담 할 업체",
-      value: "45개",
-      type: "consultation",
+      label: "Deployment Scheduled",
+      value: "5 items",
+      type: "deployment",
     },
   ];
 
@@ -547,11 +552,12 @@ const Section4 = ({ theme }) => {
                 flexDirection: "row",
               }}
             >
-              <H6>일정</H6>
+              <H6>Schedule</H6>
               <MySelect
-                items={["이번 주", "이번 달", "오늘"]}
-                height={"50px"}
-                placeholder={"오늘"}
+                items={["This Week", "This Month", "Today"]}
+                height={"40px"}
+                width={"120px"}
+                placeholder={"Today"}
               />
             </FlexRowAlign>
 
@@ -564,7 +570,7 @@ const Section4 = ({ theme }) => {
           </FlexRowAlign>
 
           <Grid item container xs={12} height="100%" spacing={2}>
-            {/* 달력 박스 */}
+            {/* Calendar Box */}
             <Grid container item sm={6} xs={12} sx={{ height: "100%" }}>
               <Grid
                 item
@@ -587,7 +593,7 @@ const Section4 = ({ theme }) => {
               </Grid>
             </Grid>
 
-            {/* 일정 박스 */}
+            {/* Schedule Box */}
             <Grid container item sm={6} xs={12} sx={{ height: "100%" }}>
               <Grid
                 item
@@ -615,32 +621,32 @@ const Section4 = ({ theme }) => {
                       },
                     }}
                   >
-                    <Tab
-                      label="업무"
-                      sx={{
-                        fontSize: 14.5,
-                        color:
-                          selectedTab === 0
-                            ? theme.palette.primary.violet
-                            : theme.palette.primary.grey,
-                        "&.Mui-selected": {
-                          color: theme.palette.primary.violet,
-                        },
-                      }}
-                    />
-                    <Tab
-                      label="예약"
-                      sx={{
-                        fontSize: 14.5,
-                        color:
-                          selectedTab === 1
-                            ? theme.palette.primary.violet
-                            : theme.palette.primary.grey,
-                        "&.Mui-selected": {
-                          color: theme.palette.primary.violet,
-                        },
-                      }}
-                    />
+                                      <Tab
+                    label="Issues"
+                    sx={{
+                      fontSize: 14.5,
+                      color:
+                        selectedTab === 0
+                          ? theme.palette.primary.violet
+                          : theme.palette.primary.grey,
+                      "&.Mui-selected": {
+                        color: theme.palette.primary.violet,
+                      },
+                    }}
+                  />
+                  <Tab
+                    label="Meetings"
+                    sx={{
+                      fontSize: 14.5,
+                      color:
+                        selectedTab === 1
+                          ? theme.palette.primary.violet
+                          : theme.palette.primary.grey,
+                      "&.Mui-selected": {
+                        color: theme.palette.primary.violet,
+                      },
+                    }}
+                  />
                   </Tabs>
 
                   {/* Table */}
@@ -690,7 +696,6 @@ function MyCalendar() {
         weekends={true}
         events={events}
         eventContent={renderEventContent}
-        locale={krLocale}
         dayCellContent={renderDayCellContent}
         dayHeaderContent={renderDayHeaderContent}
         dayCellClassNames={handleDayCellClassNames}
@@ -711,13 +716,13 @@ function renderDayHeaderContent(dayInfo) {
   const isSunday = dayInfo.date.getDay() === 0; // Check if it's Sunday
 
   return (
-    <H5
+    <ButtonText
       pt={1}
       pb={1}
-      style={{ fontWeight: 500, color: isSunday ? "#EB5757" : "#151515" }}
+      style={{ fontWeight: 400, color: isSunday ? "#EB5757" : "#151515" }}
     >
-      {dayInfo.text} {/* Render the day name */}
-    </H5>
+      {dayInfo.text}
+    </ButtonText>
   );
 }
 

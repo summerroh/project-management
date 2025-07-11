@@ -17,72 +17,72 @@ import { H6, H7 } from "components/Typography";
 import { Send, X } from "lucide-react";
 import { useState } from "react";
 
-const tabItems = ["카카오 채널", "팀 채팅", "전화", "문자"];
+const tabItems = ["Team Chat", "Phone", "Text"];
 
 const sampleChatData = [
   {
     id: 1,
     sender: "user",
-    message: "안녕하세요, 보험 상담을 받고 싶습니다.",
+    message: "Hey team, do we have an update on the new dashboard feature?",
     timestamp: "2024-03-15T09:30:00Z",
   },
   {
     id: 2,
     sender: "agent",
-    message: "안녕하세요! 어떤 종류의 보험에 관심이 있으신가요?",
+    message: "Hi! The frontend is almost done. We're integrating the API now.",
     timestamp: "2024-03-15T09:31:00Z",
   },
   {
     id: 3,
     sender: "user",
-    message: "자동차 보험을 알아보고 있어요.",
+    message: "Great! Backend, is the endpoint ready for testing?",
     timestamp: "2024-03-15T09:32:00Z",
   },
   {
     id: 4,
     sender: "agent",
     message:
-      "네, 자동차 보험에 대해 안내해 드리겠습니다. 현재 운전하시는 차량의 종류와 연식을 알려주시겠어요?",
+      "Yes, the /dashboard/summary endpoint is live. Let me know if you hit any issues.",
     timestamp: "2024-03-15T09:33:00Z",
   },
   {
     id: 5,
     sender: "user",
-    message: "2020년식 현대 소나타입니다.",
+    message: "Thanks! QA, can you start testing the integration this afternoon?",
     timestamp: "2024-03-15T09:34:00Z",
   },
   {
     id: 6,
     sender: "agent",
     message:
-      "네, 알겠습니다. 2020년식 현대 소나타에 대한 보험 상품을 안내해 드리겠습니다. 주로 어떤 용도로 차량을 사용하시나요? 출퇴근용인지, 업무용인지 알려주시면 더 자세한 안내가 가능합니다.",
+      "Sure, I'll add it to our queue. Any specific scenarios to focus on?",
     timestamp: "2024-03-15T09:35:00Z",
   },
   {
     id: 7,
     sender: "user",
     message:
-      "주로 출퇴근용으로 사용하고 있습니다. 가끔 주말에 가족 여행도 갑니다.",
+      "Please check for edge cases with empty data and large datasets. Also, verify the loading states.",
     timestamp: "2024-03-15T09:36:00Z",
   },
   {
     id: 8,
     sender: "agent",
     message:
-      "네, 이해했습니다. 출퇴근용과 가족 여행에 적합한 보험 상품을 추천해 드리겠습니다. 혹시 특별히 원하시는 보장 내용이 있으신가요? 예를 들어, 자기차량 손해, 무보험차 상해, 또는 긴급출동 서비스 등이 있습니다.",
+      "Got it. I'll report any bugs in Jira and update here once testing starts.",
     timestamp: "2024-03-15T09:37:00Z",
   },
   {
     id: 9,
     sender: "user",
-    message: "자기차량 손해와 긴급출동 서비스가 포함된 상품이 좋을 것 같아요.",
+    message: "Awesome, thanks everyone! Let's aim to deploy by Friday.",
     timestamp: "2024-03-15T09:38:00Z",
   },
   {
     id: 10,
     sender: "agent",
     message:
-      "네, 고객님의 요구사항을 반영한 맞춤형 상품을 안내해 드리겠습니다. 자기차량 손해와 긴급출동 서비스가 포함된 '프리미엄 세이프 드라이브' 상품을 추천드립니다. 이 상품은 출퇴근 및 가족 여행에 적합하며, 다양한 특약을 통해 보장 범위를 조절할 수 있습니다. 자세한 내용을 이메일로 보내드릴까요?",
+      "Sounds good! I'll keep you posted on progress and blockers.",
     timestamp: "2024-03-15T09:39:00Z",
   },
 ];

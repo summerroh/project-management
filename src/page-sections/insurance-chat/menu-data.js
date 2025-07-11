@@ -22,17 +22,17 @@ const MenuData = [
     path: "/dashboard",
   },
   {
-    title: "Trade",
+    title: "Table",
     icon: "/static/sidemenu/pen.png",
     selectedIcon: "/static/sidemenu/pen-selected.png",
     path: "/table",
   },
-  {
-    title: "Tax",
-    icon: "/static/sidemenu/estimate.png",
-    selectedIcon: "/static/sidemenu/estimate-selected.png",
-    path: "/tax-info",
-  },
+  // {
+  //   title: "Tax",
+  //   icon: "/static/sidemenu/estimate.png",
+  //   selectedIcon: "/static/sidemenu/estimate-selected.png",
+  //   path: "/tax-info",
+  // },
 
 ];
 

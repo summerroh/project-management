@@ -199,7 +199,7 @@ export default function GreySearchBar({ isMobile }) {
       <StyledInputContainer>
         <StyledInputBase
           inputRef={inputRef}
-          placeholder="검색어를 입력하세요"
+          placeholder="Enter keyword"
           onFocus={handleInputFocus}
           startAdornment={
             <StyledIconButton>

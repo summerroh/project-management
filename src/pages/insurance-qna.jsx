@@ -98,10 +98,19 @@ export default function InsuranceQna() {
                   <Button
                     variant="contained"
                     size="small"
-                    startIcon={<Plus size={16} />}
+                    startIcon={
+                      <Plus size={16} style={{ marginBottom: 0, verticalAlign: "middle" }} />
+                    }
                     sx={{
                       backgroundColor: primary.darkBlue,
                       "&:hover": { backgroundColor: primary.darkBlueHover },
+                      fontSize: 14,
+                      fontWeight: 700,
+                      color: theme.palette.primary.white,
+                      gap: 0, // Reduce space between icon and text
+                      alignItems: "center", // Ensure vertical centering
+                      display: "inline-flex",
+                      lineHeight: 1.2,
                     }}
                   >
                     Create

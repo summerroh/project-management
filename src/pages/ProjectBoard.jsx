@@ -16,6 +16,7 @@ import { primary } from "theme/colors";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Card, Chip, Paper, Stack } from "@mui/material";
 import CommentsPanel from "page-sections/insurance-chat/CommentsPanel";
+import { alpha } from "@mui/material/styles";
 
 const initialData = {
   columns: {
@@ -194,6 +195,7 @@ export default function ProjectBoard() {
               lg={12 - leftPanelWidth}
               xs={12}
               bgcolor={"white"}
+              sx={{ borderRadius: 3, boxShadow: 1, minHeight: `calc(100vh - ${navbarHeight}px)` }}
             >
               {/* 중간 메뉴 */}
               <Grid item xs={12}>
@@ -217,7 +219,7 @@ export default function ProjectBoard() {
                         alignItems: "center",
                       }}
                     >
-                      <H5>Projects</H5>
+                      <H5>Board</H5>
                     </FlexRowAlign>
                   </FlexBox>
 
@@ -228,6 +230,9 @@ export default function ProjectBoard() {
                     sx={{
                       backgroundColor: primary.darkBlue,
                       "&:hover": { backgroundColor: primary.darkBlueHover },
+                      fontSize: 14,
+                      fontWeight: 700,
+                      color: theme.palette.primary.white,
                     }}
                   >
                     Create
@@ -242,18 +247,21 @@ export default function ProjectBoard() {
                     borderBottom: `1px solid #E1E1E1`,
                     height: `calc(100vh - ${navbarHeight}px)`,
                     overflow: "auto",
+                    padding: "0 1rem",
                   }}
                 >
                   <DragDropContext onDragEnd={onDragEnd}>
                     <Stack direction="row" spacing={3} alignItems="flex-start" sx={{ mt: 2 }}>
-                      {data.columnOrder.map((colId) => {
+                      {data.columnOrder.map((colId, idx) => {
                         const col = data.columns[colId];
+                        // Alternate background: even = grey, odd = blue
+                        const colBg = idx % 2 === 0 ? '#f4f5f7' : '#e3f2fd';
                         return (
                           <Paper
                             key={colId}
                             sx={{
                               minWidth: 300,
-                              background: getColumnColor(colId),
+                              background: colBg,
                               p: 2,
                               borderRadius: 3,
                               boxShadow: 2,
@@ -262,9 +270,46 @@ export default function ProjectBoard() {
                             }}
                             elevation={0}
                           >
-                            <Typography variant="h6" fontWeight={600} mb={2}>
-                              {col.name}
-                            </Typography>
+                            {/* Column header with name and count */}
+                            <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+                              <Typography
+                                variant="overline"
+                                sx={{
+                                  fontSize: 13,
+                                  fontWeight: 500,
+                                  color: theme.palette.grey[400],
+                                  letterSpacing: 1,
+                                  textTransform: "uppercase",
+                                }}
+                              >
+                                {col.name}
+                              </Typography>
+                              <Box
+                                sx={{
+                                  ml: 1,
+                                  px: 1,
+                                  py: 0.4,
+                                  borderRadius: 1.5,
+                                  background: alpha(theme.palette.grey[400], 0.25),
+                                  minWidth: 10,
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                }}
+                              >
+                                <Typography
+                                  variant="subtitle2"
+                                  sx={{
+                                    fontWeight: 600,
+                                    color: theme.palette.grey[500],
+                                    fontSize: 13,
+                                    lineHeight: 1.2,
+                                  }}
+                                >
+                                  {col.items.length}
+                                </Typography>
+                              </Box>
+                            </Box>
                             <Droppable droppableId={colId}>
                               {(provided, snapshot) => (
                                 <Box

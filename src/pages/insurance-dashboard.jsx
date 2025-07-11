@@ -63,7 +63,7 @@ export default function InsuranceDashboard() {
               bgcolor={"white"}
             >
               {/* 중간 메뉴 */}
-              <MiddleMenu title={"대시보드"} />
+              <MiddleMenu title={"Dashboard"} />
 
               {/* 중간 내용 */}
               <Grid item lg={12 - rightPanelWidth} xs={12}>
