@@ -133,7 +133,7 @@ export default function SideMenu({}) {
               <Tiny
                 sx={{ color: theme.palette.primary.dark, cursor: "pointer" }}
               >
-                워크스페이스 추가
+                Add Workspace
               </Tiny>
             </FlexBox>
           </Box>

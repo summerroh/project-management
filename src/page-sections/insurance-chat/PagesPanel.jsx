@@ -328,7 +328,7 @@ export default function PagesPanel({ setIsLeftPanelCollapsed }) {
                       cursor: "pointer",
                     }}
                   >
-                    워크스페이스 추가
+                    Add Workspace
                   </Tiny>
                 </FlexBox>
               </Box>

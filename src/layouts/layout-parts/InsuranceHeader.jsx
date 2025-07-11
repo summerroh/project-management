@@ -1055,7 +1055,7 @@ export default function InsuranceHeader(props) {
                 cursor: "pointer",
               }}
             >
-              워크스페이스 추가
+              Add Workspace
             </Tiny>
           </FlexBox>
         </Box>
