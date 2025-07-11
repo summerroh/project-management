@@ -42,7 +42,7 @@ export default function MiddleMenu({ title }) {
             "&:hover": { backgroundColor: theme.palette.primary.darkBlueHover },
           }}
         >
-          추가 입력
+                          Additional Input
         </Button>
       </Box>
     </Grid>

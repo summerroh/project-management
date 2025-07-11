@@ -20,51 +20,59 @@ const navbarHeight = 104;
 const historyData = [
   {
     id: 1,
-    time: "9월 8일 오전 10:15",
-    version: "현재 버전",
-    name: "슈가컴퍼니",
+    time: "Sep 8, 10:15 AM",
+    version: "v1.2.3",
+    name: "Project Manager",
+    action: "Project Created",
   },
   {
     id: 2,
-    time: "9월 8일 오전 10:15",
-    version: "현재 버전",
-    name: "슈가컴퍼니",
+    time: "Sep 8, 10:15 AM",
+    version: "v1.2.2",
+    name: "Frontend Developer",
+    action: "UI Component Added",
   },
   {
     id: 3,
-    time: "9월 8일 오전 10:15",
-    version: "현재 버전",
-    name: "슈가컴퍼니",
+    time: "Sep 8, 10:15 AM",
+    version: "v1.2.1",
+    name: "Backend Developer",
+    action: "API Endpoint Modified",
   },
   {
     id: 4,
-    time: "9월 8일 오전 10:15",
-    version: "현재 버전",
-    name: "슈가컴퍼니",
+    time: "Sep 8, 10:15 AM",
+    version: "v1.2.0",
+    name: "QA Engineer",
+    action: "Test Case Updated",
   },
   {
     id: 5,
-    time: "9월 8일 오전 10:15",
-    version: "현재 버전",
-    name: "슈가컴퍼니",
+    time: "Sep 8, 10:15 AM",
+    version: "v1.1.9",
+    name: "DevOps Engineer",
+    action: "Deployment Config Changed",
   },
   {
     id: 6,
-    time: "9월 8일 오전 10:15",
-    version: "현재 버전",
-    name: "슈가컴퍼니",
+    time: "Sep 8, 10:15 AM",
+    version: "v1.1.8",
+    name: "UX Designer",
+    action: "Design System Updated",
   },
   {
     id: 7,
-    time: "9월 8일 오전 10:15",
-    version: "현재 버전",
-    name: "슈가컴퍼니",
+    time: "Sep 8, 10:15 AM",
+    version: "v1.1.7",
+    name: "Tech Lead",
+    action: "Code Review Completed",
   },
   {
     id: 8,
-    time: "9월 8일 오전 10:15",
-    version: "현재 버전",
-    name: "슈가컴퍼니",
+    time: "Sep 8, 10:15 AM",
+    version: "v1.1.6",
+    name: "Senior Developer",
+    action: "Performance Optimized",
   },
 ];
 
@@ -213,7 +221,7 @@ export default function HistoryPanel({ setRightPanel, onResize }) {
                 }}
               >
                 <History size={22} color={theme.palette.primary.white} />
-                <H6 sx={{ color: theme.palette.primary.white }}>히스토리</H6>
+                <H6 sx={{ color: theme.palette.primary.white }}>History</H6>
               </FlexRowAlign>
             </FlexBox>
 
@@ -266,10 +274,10 @@ export default function HistoryPanel({ setRightPanel, onResize }) {
           <Box sx={{ width: "100%" }} mt={2}>
             <Box px={2} sx={{ overflow: "hidden" }}>
               <MySelect
-                items={["현재 버전", "이전 버전"]}
+                items={["Current Version", "Previous Version"]}
                 width={"100%"}
                 height={"40px"}
-                placeholder={"현재 버전"}
+                placeholder={"Current Version"}
               />
             </Box>
 

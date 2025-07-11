@@ -10,27 +10,27 @@ const menuItems = [
   {
     icon: "/static/sidemenu/find.png",
     selectedIcon: "/static/sidemenu/find-selected.png",
-    title: "지원금 찾기",
+    title: "Find Support",
   },
   {
     icon: "/static/sidemenu/coin.png",
     selectedIcon: "/static/sidemenu/coin-selected.png",
-    title: "저금리 대출",
+    title: "Low Rate Loan",
   },
   {
     icon: "/static/sidemenu/home.png",
     selectedIcon: "/static/sidemenu/home-selected.png",
-    title: "홈페이지",
+    title: "Homepage",
   },
   {
     icon: "/static/sidemenu/contents.png",
     selectedIcon: "/static/sidemenu/contents-selected.png",
-    title: "사업 지식",
+    title: "Business Knowledge",
   },
   {
     icon: "/static/sidemenu/more.png",
     selectedIcon: "/static/sidemenu/more-selected.png",
-    title: "더보기",
+    title: "More",
   },
 ];
 

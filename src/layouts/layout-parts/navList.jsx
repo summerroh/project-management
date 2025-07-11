@@ -1,7 +1,7 @@
 const sideMenuList1 = [
   {
     id: 1,
-    title: "대쉬보드",
+    title: "Dashboard",
     icon: "/static/sidemenu/dashboard.png",
     selectedIcon: "/static/sidemenu/dashboard-selected.png",
     path: "/dashboard",

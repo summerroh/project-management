@@ -26,34 +26,34 @@ const commentsData = [
   {
     id: 1,
     image: avatar5,
-    name: "라운지 초심자",
+    name: "Project Manager",
     followers: 1234,
-    time: "오전 10:17 오늘",
-    content: "안녕하세요",
+    time: "10:17 AM Today",
+    content: "Please check the project progress status.",
   },
   {
     id: 2,
     image: avatar5,
-    name: "디자이너 채은",
+    name: "Frontend Developer",
     followers: 5678,
-    time: "오전 10:17 오늘",
-    content: "안녕하세요",
+    time: "10:17 AM Today",
+    content: "UI component work has been completed.",
   },
   {
     id: 3,
     image: avatar5,
-    name: "라리롬",
+    name: "Backend Developer",
     followers: 9012,
-    time: "오전 10:17 오늘",
-    content: "안녕하세요",
+    time: "10:17 AM Today",
+    content: "API endpoint testing is required.",
   },
   {
     id: 4,
     image: avatar5,
-    name: "게임마스터",
+    name: "QA Engineer",
     followers: 3456,
-    time: "오전 10:17 오늘",
-    content: "안녕하세요",
+    time: "10:17 AM Today",
+    content: "Currently writing test cases.",
   },
 ];
 
@@ -322,7 +322,7 @@ export default function CommentsPanel({
                 }}
               >
                 <Tab
-                  label="모든 댓글"
+                  label="All Comments"
                   sx={{
                     padding: "6px 0px 6px 0px",
                     fontSize: 14.5,
@@ -337,7 +337,7 @@ export default function CommentsPanel({
                   }}
                 />
                 <Tab
-                  label="작성자 댓글"
+                  label="Author Comments"
                   sx={{
                     fontSize: 14.5,
                     color:
@@ -407,7 +407,7 @@ export default function CommentsPanel({
           <StyledTextField
             type="text"
             name="newComment"
-            placeholder="댓글을 입력하세요"
+                            placeholder="Enter your comment"
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}
             sx={{

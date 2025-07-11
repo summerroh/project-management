@@ -43,48 +43,28 @@ import ChatRoom from "page-sections/insurance-chat/ChatRoom";
 
 const menus = [
   {
-    name: "벤처인증",
-    url: "/naver/insurance/survey",
+    name: "Dashboard",
+    url: "/dashboard",
     children: [],
   },
   {
-    name: "채팅",
-    url: "/naver/insurance/chat",
+    name: "Trade",
+    url: "/table",
     children: [],
   },
   {
-    name: "대시보드",
-    url: "/naver/insurance/dashboard",
+    name: "Projects",
+    url: "/projects",
     children: [],
   },
   {
-    name: "수기 거래 관리",
-    url: "/naver/insurance/table",
+    name: "Tax",
+    url: "/tax-info",
     children: [],
   },
   {
-    name: "견적 요청",
-    url: "/naver/insurance/quotation",
-    children: [],
-  },
-  {
-    name: "질문답변",
-    url: "/naver/insurance/qna",
-    children: [],
-  },
-  {
-    name: "자기소개서",
-    url: "/naver/insurance/self-introduction",
-    children: [],
-  },
-  {
-    name: "경정청구",
-    url: "/naver/insurance/tax-reassessment",
-    children: [],
-  },
-  {
-    name: "일반메뉴",
-    url: "/naver/kmong",
+    name: "Board",
+    url: "/board",
     children: [],
   },
 ];
@@ -573,7 +553,7 @@ export default function InsuranceHeader(props) {
                   <H2
                     sx={{ fontWeight: 700, color: theme.palette.primary.dark }}
                   >
-                    슈가클라우드
+                    SwiftCloud
                   </H2>
                 </NavLink>
               </Box>
@@ -880,7 +860,7 @@ export default function InsuranceHeader(props) {
                             fontWeight: 600,
                           }}
                         >
-                          슈가클라우드
+                          SwiftCloud
                         </H6>
                         <ChevronDown
                           size={22}
@@ -899,8 +879,8 @@ export default function InsuranceHeader(props) {
                           alignItems: "center",
                         }}
                       >
-                        {(menu.name === "일반메뉴" ||
-                          menu.name === "전산관리") && (
+                        {(menu.name === "Menu" ||
+                          menu.name === "System") && (
                           <Settings
                             size={18}
                             style={{ marginLeft: "16px" }}
@@ -921,8 +901,8 @@ export default function InsuranceHeader(props) {
                               ? theme.palette.primary.darkBlue
                               : "inherit",
                             marginLeft:
-                              menu.name === "일반메뉴" ||
-                              menu.name === "전산관리"
+                              menu.name === "Menu" ||
+                              menu.name === "System"
                                 ? "4px"
                                 : "20px",
                             display: "flex",
@@ -1070,7 +1050,7 @@ export default function InsuranceHeader(props) {
             </FlexBox>
             <FlexBox flexDirection={"column"}>
               <Tiny sx={{ color: theme.palette.primary.dark }}>
-                슈가클라우드
+                SwiftCloud
               </Tiny>
               <Tiny sx={{ fontWeight: 400 }}>
                 a7f3b9c2-e1d5-4f8a-9b6e-2c8d7f1e0a3x

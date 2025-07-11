@@ -37,8 +37,8 @@ export default function MenuPanel({ setIsLeftPanelCollapsed }) {
 
   const [anchorEl, setAnchorEl] = useState(null);
   const [menuAnchorEl, setMenuAnchorEl] = useState(null);
-  const [activityFilter, setActivityFilter] = useState("모든 내 활동");
-  const [userFilter, setUserFilter] = useState("모든 사용자");
+  const [activityFilter, setActivityFilter] = useState("All My Activities");
+  const [userFilter, setUserFilter] = useState("All Users");
   const [isPanelCollapsed, setIsPanelCollapsed] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(true);
 
@@ -123,7 +123,7 @@ export default function MenuPanel({ setIsLeftPanelCollapsed }) {
                 onClick={handleLogoClick}
               >
                 <H6 sx={{ color: theme.palette.primary.white }}>
-                  슈가클라우드
+                  SwiftCloud
                 </H6>
                 <ChevronDown size={22} color={theme.palette.primary.white} />
               </FlexBox>
@@ -170,7 +170,7 @@ export default function MenuPanel({ setIsLeftPanelCollapsed }) {
                 }}
               >
                 <Folder size={24} color={theme.palette.primary.grey300} />
-                <H6>대시보드</H6>
+                <H6>Projects</H6>
               </FlexRowAlign>
 
               <MenuContent />

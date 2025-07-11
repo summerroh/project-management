@@ -91,7 +91,7 @@ export default function InsuranceQna() {
                         alignItems: "center",
                       }}
                     >
-                      <H5>Projects Management</H5>
+                      <H5>Projects</H5>
                     </FlexRowAlign>
                   </FlexBox>
 

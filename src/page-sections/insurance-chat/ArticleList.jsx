@@ -46,123 +46,123 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 const forumData = [
   {
-    category: "종합소득세",
-    title: "차이점 찾기 이벤트",
+    category: "Income",
+    title: "User Authentication System Implementation",
     numOfComment: 13,
-    writer: "라운지 초심자",
+    writer: "Project Manager",
     likes: 3,
     views: 238,
     date: "2023.12.28",
     index: 1,
   },
   {
-    category: "양도소득세",
-    title: "차이점 찾기 이벤트",
-    numOfComment: 13,
-    writer: "라운지 초심자",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    category: "Transfer",
+    title: "Login Page Responsive Design Fix",
+    numOfComment: 8,
+    writer: "Frontend Developer",
+    likes: 5,
+    views: 156,
+    date: "2023.12.27",
     index: 2,
   },
   {
-    category: "부가가치세",
-    title: "차이점 찾기 이벤트",
-    numOfComment: 13,
-    writer: "라운지 초심자",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    category: "VAT",
+    title: "Database Query Optimization",
+    numOfComment: 6,
+    writer: "Backend Developer",
+    likes: 7,
+    views: 189,
+    date: "2023.12.26",
     index: 3,
   },
   {
-    category: "사업자 등록",
-    title: "게임의 기본적인 설계와 운영방침에 대해서",
+    category: "Business",
+    title: "API Documentation Update",
     numOfComment: 2,
-    writer: "라운지 초심자",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    writer: "Technical Writer",
+    likes: 2,
+    views: 95,
+    date: "2023.12.25",
     index: 4,
   },
   {
-    category: "상속세",
-    title: "운영자님 유탄 있잖아요..",
-    numOfComment: 6,
-    writer: "전국제패 평지",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    category: "Estate",
+    title: "Mobile App Development Project",
+    numOfComment: 15,
+    writer: "Project Lead",
+    likes: 12,
+    views: 342,
+    date: "2023.12.24",
     index: 5,
   },
   {
-    category: "종합소득세",
-    title: "차이점 찾기 이벤트",
-    numOfComment: 13,
-    writer: "라운지 초심자",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    category: "Income",
+    title: "User Profile Edit Feature",
+    numOfComment: 9,
+    writer: "UX Designer",
+    likes: 4,
+    views: 201,
+    date: "2023.12.23",
     index: 6,
   },
   {
-    category: "양도소득세",
-    title: "게임의 기본적인 설계와 운영방침에 대해서",
-    numOfComment: 2,
-    writer: "라운지 초심자",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    category: "Transfer",
+    title: "Legacy Code Refactoring",
+    numOfComment: 4,
+    writer: "Senior Developer",
+    likes: 6,
+    views: 167,
+    date: "2023.12.22",
     index: 7,
   },
   {
-    category: "상속세",
-    title: "운영자님 유탄 있잖아요..",
-    numOfComment: 6,
-    writer: "전국제패 평지",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    category: "VAT",
+    title: "Development Guidelines Documentation",
+    numOfComment: 3,
+    writer: "Tech Lead",
+    likes: 8,
+    views: 134,
+    date: "2023.12.21",
     index: 8,
   },
   {
-    category: "종합소득세",
-    title: "특권캐쉬 2배속 적용 건의",
-    numOfComment: 0,
-    writer: "	라리롬",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    category: "Business",
+    title: "Real-time Notification System",
+    numOfComment: 11,
+    writer: "Full Stack Developer",
+    likes: 9,
+    views: 278,
+    date: "2023.12.20",
     index: 9,
   },
   {
-    category: "양도소득세",
-    title: "게임의 기본적인 설계와 운영방침에 대해서",
-    numOfComment: 2,
-    writer: "라운지 초심자",
+    category: "Estate",
+    title: "Email Sending Error Fix",
+    numOfComment: 7,
+    writer: "QA Engineer",
     likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    views: 145,
+    date: "2023.12.19",
     index: 10,
   },
   {
-    category: "상속세",
-    title: "운영자님 유탄 있잖아요..",
-    numOfComment: 6,
-    writer: "전국제패 평지",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    category: "Income",
+    title: "Performance Monitoring Tool Integration",
+    numOfComment: 5,
+    writer: "DevOps Engineer",
+    likes: 6,
+    views: 198,
+    date: "2023.12.18",
     index: 11,
   },
   {
-    category: "종합소득세",
-    title: "특권캐쉬 2배속 적용 건의",
-    numOfComment: 0,
-    writer: "	라리롬",
-    likes: 3,
-    views: 238,
-    date: "2023.12.28",
+    category: "Transfer",
+    title: "Security Vulnerability Assessment",
+    numOfComment: 2,
+    writer: "Security Specialist",
+    likes: 4,
+    views: 112,
+    date: "2023.12.17",
     index: 12,
   },
 ];
@@ -209,9 +209,9 @@ export default function ArticleList({ imageLink }) {
         >
           <FlexBox sx={{ flexDirection: "column", minWidth: "150px" }}>
             <MySelect
-              items={["인기순", "최근순"]}
+              items={["Popular", "Recent"]}
               width={"100%"}
-              placeholder={"인기순"}
+              placeholder={"Popular"}
             />
           </FlexBox>
 
@@ -222,7 +222,7 @@ export default function ArticleList({ imageLink }) {
 
         <FlexBox>
           <Button variant="outlined" sx={{ mr: 1.5, height: "40px" }}>
-            초기화
+                            Reset
           </Button>
           <Button
             variant="contained"
@@ -251,7 +251,7 @@ export default function ArticleList({ imageLink }) {
         }}
       >
         <Grid item sx={{ display: "flex", flexDirection: "row" }}>
-          <Tiny>전체 110건</Tiny>
+                      <Tiny>Total 110 items</Tiny>
         </Grid>
 
         <Grid
@@ -278,7 +278,7 @@ export default function ArticleList({ imageLink }) {
                 cursor: "pointer",
               }}
             >
-              인기순
+                              Popular
             </H6>
 
             <Box
@@ -309,7 +309,7 @@ export default function ArticleList({ imageLink }) {
                 cursor: "pointer",
               }}
             >
-              조회수순
+                              Views
             </H6>
           </FlexRowAlign>
 
@@ -345,25 +345,25 @@ export default function ArticleList({ imageLink }) {
               <Grid container item sm={7}>
                 <Grid item sm={1.9}>
                   <H6 sx={{ fontWeight: 600, whiteSpace: "nowrap" }}>
-                    카테고리
+                    Category
                   </H6>
                 </Grid>
                 <Grid item sm={4.1}>
-                  <H6 sx={{ fontWeight: 600 }}>제목</H6>
+                  <H6 sx={{ fontWeight: 600 }}>Title</H6>
                 </Grid>
               </Grid>
               <Grid container item sm={5}>
                 <Grid item sm={4.2}>
-                  <H6 sx={{ fontWeight: 600 }}>작성자</H6>
+                  <H6 sx={{ fontWeight: 600 }}>Author</H6>
                 </Grid>
                 <Grid item sm={2.2}>
-                  <H6 sx={{ fontWeight: 600, textAlign: "left" }}>좋아요</H6>
+                  <H6 sx={{ fontWeight: 600, textAlign: "left" }}>Likes</H6>
                 </Grid>
                 <Grid item sm={2.3}>
-                  <H6 sx={{ fontWeight: 600 }}>조회수</H6>
+                  <H6 sx={{ fontWeight: 600 }}>Views</H6>
                 </Grid>
                 <Grid item sm={3}>
-                  <H6 sx={{ fontWeight: 600 }}>작성일</H6>
+                  <H6 sx={{ fontWeight: 600 }}>Date</H6>
                 </Grid>
               </Grid>
             </Grid>
@@ -422,19 +422,19 @@ const ListFormat = ({
   onForumClick,
 }) => {
   const categoryColors = {
-    종합소득세: "#E3F2FD",
-    양도소득세: theme.palette.primary.lightPurple,
-    부가가치세: theme.palette.primary.lightGreen,
-    "사업자 등록": theme.palette.primary.lightOrange,
-    상속세: theme.palette.primary.lightRed,
+    Income: "#E3F2FD",
+    Transfer: theme.palette.primary.lightPurple,
+    VAT: theme.palette.primary.lightGreen,
+    Business: theme.palette.primary.lightOrange,
+    Estate: theme.palette.primary.lightRed,
   };
 
   const categoryTextColors = {
-    종합소득세: "#1565C0",
-    양도소득세: theme.palette.primary.purple200,
-    부가가치세: theme.palette.primary.green,
-    "사업자 등록": theme.palette.primary.orange,
-    상속세: theme.palette.primary.red,
+    Income: "#1565C0",
+    Transfer: theme.palette.primary.purple200,
+    VAT: theme.palette.primary.green,
+    Business: theme.palette.primary.orange,
+    Estate: theme.palette.primary.red,
   };
 
   return (

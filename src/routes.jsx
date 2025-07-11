@@ -1,5 +1,6 @@
 import LoadingScreen from "components/LoadingScreen";
 import LayoutV2 from "layouts/layout-v1/LayoutV2";
+import ProjectBoard from "pages/ProjectBoard";
 import { lazy, Suspense } from "react";
 import { Navigate } from "react-router-dom";
 
@@ -22,7 +23,7 @@ const routes = () => {
   return [
     {
       path: "/",
-      element: <Navigate to="/naver/insurance/dashboard" replace />,
+      element: <Navigate to="/dashboard" replace />,
     },
     {
       path: "/",
@@ -37,20 +38,24 @@ const routes = () => {
           element: <Login />,
         },
         {
-          path: "naver/insurance/dashboard",
+          path: "dashboard",
           element: <InsuranceDashboard />,
         },
         {
-          path: "naver/insurance/table",
+          path: "table",
           element: <InsuranceTable />,
         },
         {
-          path: "naver/insurance/qna",
+          path: "projects",
           element: <InsuranceQna />,
         },
         {
-          path: "naver/insurance/tax-info",
+          path: "tax-info",
           element: <InsuranceTaxInfo />,
+        },
+        {
+          path: "board",
+          element: <ProjectBoard />,
         },
       ],
     },

@@ -104,7 +104,7 @@ const DashboardSidebar = (props) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showAlternateSidebar, setShowAlternateSidebar] = useState(false);
-  const [selectedTab, setSelectedTab] = useState("정닥터 클래스");
+  const [selectedTab, setSelectedTab] = useState("Dashboard");
   const [sideMenuData, setSideMenuData] = useState(sideMenuList1);
   const [isLoggedin, setIsLoggedin] = useState(false);
 

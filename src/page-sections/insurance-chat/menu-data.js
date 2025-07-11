@@ -1,31 +1,37 @@
 const MenuData = [
   {
-    title: "메뉴",
+    title: "Menu",
     sectionTitle: true,
   },
   {
-    title: "대시보드",
+    title: "Dashboard",
     icon: "/static/sidemenu/dashboard.png",
     selectedIcon: "/static/sidemenu/dashboard-selected.png",
-    path: "/naver/insurance/dashboard",
+    path: "/dashboard",
   },
   {
-    title: "수기 거래 관리",
+    title: "Trade",
     icon: "/static/sidemenu/pen.png",
     selectedIcon: "/static/sidemenu/pen-selected.png",
-    path: "/naver/insurance/table",
+    path: "/table",
   },
   {
-    title: "질문답변",
+    title: "Projects",
     icon: "/static/sidemenu/qa.png",
     selectedIcon: "/static/sidemenu/qa-selected.png",
-    path: "/naver/insurance/qna",
+    path: "/projects",
   },
   {
-    title: "예상세금 서비스",
+    title: "Tax",
     icon: "/static/sidemenu/estimate.png",
     selectedIcon: "/static/sidemenu/estimate-selected.png",
-    path: "/naver/insurance/tax-info",
+    path: "/tax-info",
+  },
+  {
+    title: "Board",
+    icon: "/static/sidemenu/board.png",
+    selectedIcon: "/static/sidemenu/board-selected.png",
+    path: "/board",
   },
 ];
 

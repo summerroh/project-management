@@ -1,8 +1,15 @@
 // 프로필 사진 세개 붙어있는 컴포넌트
 
 import React from "react";
+import { Box, Grid, useTheme } from "@mui/material";
+import FlexBox from "components/flexbox/FlexBox";
+import FlexRowAlign from "components/flexbox/FlexRowAlign";
+import { H6 } from "components/Typography";
+import { Hash, Phone, EllipsisVertical } from "lucide-react";
+import avatar5 from "assets/avatar-5.png";
 
 export default function ThreeAvatar() {
+  const theme = useTheme();
   return (
     <Grid item xs={12}>
       <Box
@@ -25,7 +32,7 @@ export default function ThreeAvatar() {
             }}
           >
             <Hash size={22} color={theme.palette.primary.white} />
-            <H6 sx={{ color: theme.palette.primary.white }}>업무</H6>
+                            <H6 sx={{ color: theme.palette.primary.white }}>Work</H6>
           </FlexRowAlign>
         </FlexBox>
 

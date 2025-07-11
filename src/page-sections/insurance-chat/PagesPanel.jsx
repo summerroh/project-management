@@ -231,7 +231,7 @@ export default function PagesPanel({ setIsLeftPanelCollapsed }) {
                 onClick={handleLogoClick}
               >
                 <H6 sx={{ color: theme.palette.primary.white }}>
-                  슈가클라우드
+                  SwiftCloud
                 </H6>
                 <ChevronDown size={22} color={theme.palette.primary.white} />
               </FlexBox>
@@ -300,7 +300,7 @@ export default function PagesPanel({ setIsLeftPanelCollapsed }) {
                   </FlexBox>
                   <FlexBox flexDirection={"column"}>
                     <Tiny sx={{ color: theme.palette.primary.dark }}>
-                      슈가클라우드
+                      SwiftCloud
                     </Tiny>
                     <Tiny sx={{ fontWeight: 400 }}>
                       a7f3b9c2-e1d5-4f8a-9b6e-2c8d7f1e0a3x

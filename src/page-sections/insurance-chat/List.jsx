@@ -178,7 +178,7 @@ export default function List({ showChatScreen, setShowChatScreen }) {
                   >
                     <RotateCw size={14} color={theme.palette.primary.grey400} />
                     <Tiny sx={{ fontSize: 13.5, marginLeft: 0.5 }}>
-                      다시 생성
+                      Regenerate
                     </Tiny>
                   </Box>
                   <Box
@@ -197,7 +197,7 @@ export default function List({ showChatScreen, setShowChatScreen }) {
                     }}
                   >
                     <Share2 size={14} color={theme.palette.primary.grey400} />
-                    <Tiny sx={{ fontSize: 13.5, marginLeft: 0.5 }}>공유</Tiny>
+                    <Tiny sx={{ fontSize: 13.5, marginLeft: 0.5 }}>Share</Tiny>
                   </Box>
                 </FlexBox>
               )}
@@ -205,7 +205,7 @@ export default function List({ showChatScreen, setShowChatScreen }) {
               <StyledTextField
                 type="text"
                 name="prompt"
-                placeholder="AI에게 무엇이든 요청하세요."
+                placeholder="Ask AI anything."
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 sx={{
