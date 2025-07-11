@@ -346,7 +346,7 @@ export default function InsuranceHeader(props) {
                 sx={{ width: 40, height: 40, marginRight: 1 }}
               />
               <H6 fontWeight={600} marginRight={1.5}>
-                이한솔
+                Summer Roh
               </H6>
               <Divider
                 orientation="vertical"
@@ -357,12 +357,12 @@ export default function InsuranceHeader(props) {
                 mr={1}
                 fontWeight={600}
                 color="primary.darkBlue"
-                onClick={() => navigate("/dashboard")}
+               
               >
-                마이페이지
+                My Page
               </H6>
-              <H6 fontWeight={600} color="primary.darkBlue">
-                내 강의실
+              <H6 fontWeight={600} color="primary.darkBlue"  onClick={() => navigate("/dashboard")}>
+                Dashboard
               </H6>
               <IconButton
                 onClick={handleMobileMenuToggle}
