@@ -123,7 +123,7 @@ export default function MenuPanel({ setIsLeftPanelCollapsed }) {
                 onClick={handleLogoClick}
               >
                 <H6 sx={{ color: theme.palette.primary.white }}>
-                  SwiftCloud
+                  Swift
                 </H6>
                 <ChevronDown size={22} color={theme.palette.primary.white} />
               </FlexBox>
@@ -162,14 +162,14 @@ export default function MenuPanel({ setIsLeftPanelCollapsed }) {
               <FlexRowAlign
                 mt={1.5}
                 mb={0.5}
-                px={2}
+                px={2.5}
                 gap={1}
                 sx={{
                   justifyContent: "flex-start",
                   width: "100%",
                 }}
               >
-                <Folder size={24} color={theme.palette.primary.grey300} />
+                <Folder size={20} color={theme.palette.primary.grey300} />
                 <H6>Projects</H6>
               </FlexRowAlign>
 

@@ -42,7 +42,7 @@ export default function MiddleMenu({ title }) {
             "&:hover": { backgroundColor: theme.palette.primary.darkBlueHover },
           }}
         >
-                          Additional Input
+          Input
         </Button>
       </Box>
     </Grid>

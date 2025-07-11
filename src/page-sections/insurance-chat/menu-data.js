@@ -4,16 +4,16 @@ const MenuData = [
     sectionTitle: true,
   },
   {
-    title: "Projects",
-    icon: "/static/sidemenu/qa.png",
-    selectedIcon: "/static/sidemenu/qa-selected.png",
-    path: "/projects",
-  },
-  {
     title: "Board",
     icon: "/static/sidemenu/board.png",
     selectedIcon: "/static/sidemenu/board-selected.png",
     path: "/board",
+  },
+  {
+    title: "Projects",
+    icon: "/static/sidemenu/qa.png",
+    selectedIcon: "/static/sidemenu/qa-selected.png",
+    path: "/projects",
   },
   {
     title: "Dashboard",
@@ -22,7 +22,7 @@ const MenuData = [
     path: "/dashboard",
   },
   {
-    title: "Table",
+    title: "Transactions",
     icon: "/static/sidemenu/pen.png",
     selectedIcon: "/static/sidemenu/pen-selected.png",
     path: "/table",

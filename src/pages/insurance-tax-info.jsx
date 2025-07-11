@@ -32,7 +32,7 @@ export default function InsuranceTaxInfo() {
   const [showTaxCalculatorModal, setShowTaxCalculatorModal] = useState(false);
   const [showInfoModal, setShowInfoModal] = useState(false);
   const [infoModalContent, setInfoModalContent] =
-    useState("예상세금 서비스 설명입니다.");
+    useState("Project Analytics Service Description");
 
   useEffect(() => {
     setLeftPanelWidth(isLeftPanelCollapsed ? 0.4 : 1.5);
@@ -113,7 +113,7 @@ export default function InsuranceTaxInfo() {
                         alignItems: "center",
                       }}
                     >
-                      <H5>예상세금 서비스</H5>
+                      <H5>Project Analytics</H5>
 
                       <FlexRowAlign gap={0.5}>
                         <CircleHelp
@@ -124,7 +124,7 @@ export default function InsuranceTaxInfo() {
                           sx={{ color: theme.palette.primary.darkBlue }}
                           onClick={() => setShowInfoModal(true)}
                         >
-                          예상세금 서비스란?
+                          What is Project Analytics?
                         </Small>
                       </FlexRowAlign>
                     </FlexBox>
@@ -140,7 +140,7 @@ export default function InsuranceTaxInfo() {
                         "&:hover": { backgroundColor: primary.darkBlueHover },
                       }}
                     >
-                      예상세금계산서
+                      Generate Report
                     </Button>
 
                     <Button
@@ -152,13 +152,13 @@ export default function InsuranceTaxInfo() {
                         "&:hover": { backgroundColor: primary.darkBlueHover },
                       }}
                     >
-                      추가 입력
+                      Add Data
                     </Button>
                   </FlexBox>
                 </Box>
               </Grid>
 
-              {/* 중간 내용 */}
+              {/* Middle Content */}
               <Grid item lg={12 - rightPanelWidth} xs={12}>
                 <Box
                   sx={{
@@ -171,7 +171,7 @@ export default function InsuranceTaxInfo() {
                 </Box>
               </Grid>
 
-              {/* 오른쪽 패널 */}
+              {/* Right Panel */}
               <Grid item lg={rightPanelWidth} xs={12}>
                 {rightPanel === "comment" ? (
                   <CommentsPanel

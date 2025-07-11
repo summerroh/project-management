@@ -52,10 +52,10 @@ export default function InsuranceTableContent() {
 
 const Section1 = ({ theme }) => {
   const isTablet = useMediaQuery(theme.breakpoints.down("md"));
-  const [selectedUnit, setSelectedUnit] = useState("월");
-  const [selectedType, setSelectedType] = useState("전체");
-  const [selectedEvidence, setSelectedEvidence] = useState("전체");
-  const [selectedTaxType, setSelectedTaxType] = useState("전체");
+  const [selectedUnit, setSelectedUnit] = useState("Month");
+  const [selectedType, setSelectedType] = useState("All");
+  const [selectedEvidence, setSelectedEvidence] = useState("All");
+  const [selectedTaxType, setSelectedTaxType] = useState("All");
 
   const getButtonStyle = (index, arrayLength, item, selectedValue) => ({
     height: "40px",
@@ -94,18 +94,18 @@ const Section1 = ({ theme }) => {
           }}
         >
           <FlexBox sx={{ flexDirection: "column", minWidth: "200px" }}>
-            <H6 mb={1}>기준일</H6>
+            <H6 mb={1}>Reference Date</H6>
             <MySelect
-              items={["저번 주", "이번 주", "오늘"]}
+              items={["Last Week", "This Week", "Today"]}
               width={"200px"}
-              placeholder={"기준일"}
+              placeholder={"Reference Date"}
             />
           </FlexBox>
 
           <FlexBox sx={{ flexDirection: "column", minWidth: "300px" }}>
-            <H6 mb={1}>기준 단위</H6>
+            <H6 mb={1}>Time Unit</H6>
             <FlexBox>
-              {["월", "분기", "반기", "연", "기타"].map(
+              {["Month", "Quarter", "Half Year", "Year", "Other"].map(
                 (item, index, array) => (
                   <Button
                     key={index}
@@ -121,18 +121,18 @@ const Section1 = ({ theme }) => {
           </FlexBox>
 
           <FlexBox sx={{ flexDirection: "column", minWidth: "200px" }}>
-            <H6 mb={1}>상세 기간</H6>
+            <H6 mb={1}>Detailed Period</H6>
             <MySelect
-              items={["2024년", "2023년", "2022년"]}
+              items={["2024", "2023", "2022"]}
               width={"200px"}
-              defaultValue={"2024년"}
+              defaultValue={"2024"}
             />
           </FlexBox>
 
           <FlexBox sx={{ flexDirection: "column", minWidth: "300px" }}>
-            <H6 mb={1}>종류</H6>
+            <H6 mb={1}>Type</H6>
             <FlexBox>
-              {["전체", "매출", "매입"].map((item, index, array) => (
+              {["All", "Income", "Expense"].map((item, index, array) => (
                 <Button
                   key={index}
                   variant="outlined"
@@ -151,14 +151,14 @@ const Section1 = ({ theme }) => {
               minWidth: isTablet ? "100%" : "300px",
             }}
           >
-            <H6 mb={1}>증명</H6>
+            <H6 mb={1}>Document Type</H6>
             <FlexBox
               sx={{
                 flexWrap: isTablet ? "wrap" : "nowrap",
                 gap: isTablet ? 0 : 0,
               }}
             >
-              {["전체", "세금계산서", "계산서", "카드", "현금", "기타"].map(
+              {["All", "Invoice", "Receipt", "Card", "Cash", "Other"].map(
                 (item, index, array) => (
                   <Button
                     key={index}
@@ -186,9 +186,9 @@ const Section1 = ({ theme }) => {
           </FlexBox>
 
           <FlexBox sx={{ flexDirection: "column", minWidth: "300px" }}>
-            <H6 mb={1}>과세 유형</H6>
+            <H6 mb={1}>Tax Type</H6>
             <FlexBox>
-              {["전체", "과세", "면세"].map((item, index, array) => (
+              {["All", "Taxable", "Tax Exempt"].map((item, index, array) => (
                 <Button
                   key={index}
                   variant="outlined"
@@ -216,81 +216,81 @@ const Section3 = ({ theme }) => {
 
   const tableData = [
     {
-      date: "2021-01-04",
-      type: "매출",
-      evidence: "세금계산서",
-      taxType: "과세",
-      company: "현대빌딩",
-      businessNumber: "000-00-00000",
-      itemName: "사무실 임대",
-      totalAmount: "5,500,000원",
-      supplyAmount: "5,500,000원",
-      vatAmount: "500,000원",
+      date: "2024-01-04",
+      type: "Income",
+      evidence: "Invoice",
+      taxType: "Taxable",
+      company: "TechCorp Solutions",
+      businessNumber: "123-45-67890",
+      itemName: "Software Development",
+      totalAmount: "$5,500.00",
+      supplyAmount: "$5,000.00",
+      vatAmount: "$500.00",
       inputDate: "2024-01-04 12:45",
     },
     {
-      date: "2021-01-05",
-      type: "매입",
-      evidence: "세금계산서",
-      taxType: "과세",
-      company: "삼성전자",
-      businessNumber: "111-11-11111",
-      itemName: "전자제품",
-      totalAmount: "3,300,000원",
-      supplyAmount: "3,000,000원",
-      vatAmount: "300,000원",
+      date: "2024-01-05",
+      type: "Expense",
+      evidence: "Invoice",
+      taxType: "Taxable",
+      company: "Office Supplies Co",
+      businessNumber: "234-56-78901",
+      itemName: "Office Equipment",
+      totalAmount: "$3,300.00",
+      supplyAmount: "$3,000.00",
+      vatAmount: "$300.00",
       inputDate: "2024-01-05 09:30",
     },
     {
-      date: "2021-01-06",
-      type: "매출",
-      evidence: "현금영수증",
-      taxType: "면세",
-      company: "대한물산",
-      businessNumber: "222-22-22222",
-      itemName: "컨설팅 서비스",
-      totalAmount: "2,200,000원",
-      supplyAmount: "2,200,000원",
-      vatAmount: "0원",
+      date: "2024-01-06",
+      type: "Income",
+      evidence: "Receipt",
+      taxType: "Tax Exempt",
+      company: "Consulting Partners",
+      businessNumber: "345-67-89012",
+      itemName: "Consulting Services",
+      totalAmount: "$2,200.00",
+      supplyAmount: "$2,200.00",
+      vatAmount: "$0.00",
       inputDate: "2024-01-06 14:20",
     },
     {
-      date: "2021-01-07",
-      type: "매입",
-      evidence: "세금계산서",
-      taxType: "과세",
-      company: "LG전자",
-      businessNumber: "333-33-33333",
-      itemName: "사무용품",
-      totalAmount: "1,100,000원",
-      supplyAmount: "1,000,000원",
-      vatAmount: "100,000원",
+      date: "2024-01-07",
+      type: "Expense",
+      evidence: "Invoice",
+      taxType: "Taxable",
+      company: "Digital Marketing Inc",
+      businessNumber: "456-78-90123",
+      itemName: "Marketing Services",
+      totalAmount: "$1,100.00",
+      supplyAmount: "$1,000.00",
+      vatAmount: "$100.00",
       inputDate: "2024-01-07 16:15",
     },
     {
-      date: "2021-01-08",
-      type: "��출",
-      evidence: "세금계산서",
-      taxType: "과세",
-      company: "롯데마트",
-      businessNumber: "444-44-44444",
-      itemName: "물품 납품",
-      totalAmount: "8,800,000원",
-      supplyAmount: "8,000,000원",
-      vatAmount: "800,000원",
+      date: "2024-01-08",
+      type: "Income",
+      evidence: "Invoice",
+      taxType: "Taxable",
+      company: "Global Solutions Ltd",
+      businessNumber: "567-89-01234",
+      itemName: "Project Management",
+      totalAmount: "$8,800.00",
+      supplyAmount: "$8,000.00",
+      vatAmount: "$800.00",
       inputDate: "2024-01-08 11:25",
     },
     {
-      date: "2021-01-09",
-      type: "매입",
-      evidence: "현금영수증",
-      taxType: "면세",
-      company: "한국기업",
-      businessNumber: "555-55-55555",
-      itemName: "교육 서비스",
-      totalAmount: "1,500,000원",
-      supplyAmount: "1,500,000원",
-      vatAmount: "0원",
+      date: "2024-01-09",
+      type: "Expense",
+      evidence: "Receipt",
+      taxType: "Tax Exempt",
+      company: "Training Institute",
+      businessNumber: "678-90-12345",
+      itemName: "Employee Training",
+      totalAmount: "$1,500.00",
+      supplyAmount: "$1,500.00",
+      vatAmount: "$0.00",
       inputDate: "2024-01-09 13:40",
     },
   ];
@@ -308,8 +308,8 @@ const Section3 = ({ theme }) => {
               flexDirection: "row",
             }}
           >
-            <H6>조회 결과</H6>
-            <Tiny>조회기준일자: 2024.01.01 ~ 2024.12.31</Tiny>
+            <H6>Search Results</H6>
+            <Tiny>Search Period: 2024.01.01 ~ 2024.12.31</Tiny>
           </FlexRowAlign>
 
           <FlexRowAlign
@@ -328,7 +328,7 @@ const Section3 = ({ theme }) => {
             <Button
               variant="contained"
               size="small"
-              startIcon={<img src={"/static/logo/excel.png"} width={28} />}
+              startIcon={<img src={"/static/logos/excel.png"} width={28} />}
               sx={{
                 color: "#169154",
                 border: `1px solid ${theme.palette.primary.borderColor}`,
@@ -338,12 +338,12 @@ const Section3 = ({ theme }) => {
                 },
               }}
             >
-              엑셀 다운로드
+              Export to Excel
             </Button>
           </FlexRowAlign>
 
           <Box mb={2}>
-            <Tiny>전체 110건</Tiny>
+            <Tiny>Total 110 items</Tiny>
           </Box>
 
           <Grid container sx={{ height: "100%" }}>
@@ -369,20 +369,20 @@ const Section3 = ({ theme }) => {
                           fontWeight: 600,
                         }}
                       >
-                        거래일자
+                        Transaction Date
                       </TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>종류</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>증빙</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>과세유형</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>거래처명</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>Type</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>Document</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>Tax Type</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>Company</TableCell>
                       <TableCell sx={{ fontWeight: 600 }}>
-                        사업자/주민번호
+                        Business Number
                       </TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>품명</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>합계금액</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>공급가액</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>부가세액</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>입력일시</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>Item</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>Total Amount</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>Net Amount</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>Tax Amount</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>Entry Date</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>

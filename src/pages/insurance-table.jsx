@@ -1,5 +1,3 @@
-// 보험 - 수기 거래 관리
-
 import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import DashboardContent from "page-sections/insurance-chat/DashboardContent";
 import InsuranceTableContent from "page-sections/insurance-chat/InsuranceTableContent";
@@ -54,7 +52,7 @@ export default function InsuranceTable() {
               bgcolor={"white"}
             >
               {/* 중간 메뉴 */}
-              <MiddleMenu title={"수기 거래 관리"} />
+              <MiddleMenu title={"Transactions"} />
 
               {/* 중간 내용 */}
               <Grid item lg={12} xs={12}>

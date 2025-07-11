@@ -43,13 +43,13 @@ import ChatRoom from "page-sections/insurance-chat/ChatRoom";
 
 const menus = [
   {
-    name: "Projects",
-    url: "/projects",
+    name: "Board",
+    url: "/board",
     children: [],
   },
   {
-    name: "Board",
-    url: "/board",
+    name: "Projects",
+    url: "/projects",
     children: [],
   },
   {
@@ -58,7 +58,7 @@ const menus = [
     children: [],
   },
   {
-    name: "Table",
+    name: "Transactions",
     url: "/table",
     children: [],
   },
@@ -144,7 +144,7 @@ const Overlay = styled(Box)(({ theme }) => ({
 const DashboardHeaderRoot = styled(AppBar)(({ theme, isLaptop }) => ({
   zIndex: 1201,
   boxShadow: "none",
-  padding: isLaptop ? "0.5rem 1rem 0rem 1rem" : "0rem 1rem",
+  padding: isLaptop ? "0.5rem 1rem 0rem 1rem" : "0rem 0rem",
   width: "100%",
   backgroundColor: "#ffffff",
   color: theme.palette.text.primary,
@@ -553,7 +553,7 @@ export default function InsuranceHeader(props) {
                   <H2
                     sx={{ fontWeight: 700, color: theme.palette.primary.dark }}
                   >
-                    SwiftCloud
+                    Swift
                   </H2>
                 </NavLink>
               </Box>
@@ -797,6 +797,8 @@ export default function InsuranceHeader(props) {
                 msOverflowStyle: "none",
                 display: "flex",
                 flexDirection: "row",
+                paddingLeft: "16px",
+                paddingRight: "18px",
                 transform: transform
                   ? `translate3d(${transform.x}px, ${transform.y}px, 0)`
                   : undefined,
@@ -847,7 +849,7 @@ export default function InsuranceHeader(props) {
                             fontWeight: 600,
                           }}
                         >
-                          SwiftCloud
+                          Swift
                         </H6>
                         <ChevronDown
                           size={22}
@@ -1024,7 +1026,7 @@ export default function InsuranceHeader(props) {
             </FlexBox>
             <FlexBox flexDirection={"column"}>
               <Tiny sx={{ color: theme.palette.primary.dark }}>
-                SwiftCloud
+                Swift
               </Tiny>
               <Tiny sx={{ fontWeight: 400 }}>
                 a7f3b9c2-e1d5-4f8a-9b6e-2c8d7f1e0a3x

@@ -15,15 +15,15 @@ import { H6 } from "components/Typography";
 
 const tableData = [
   {
-    항목: "신고금액",
+    항목: "Report Amount",
     "2023년": "-",
-    "2022년": "-254,860원",
+    "2022년": "-$254,860",
     "2021년": "-",
-    "2020년": "0원",
-    "2019년": "0원",
+    "2020년": "$0",
+    "2019년": "$0",
   },
   {
-    항목: "신고일자",
+    항목: "Report Date",
     "2023년": "-",
     "2022년": "2023-05-17",
     "2021년": "-",
@@ -31,7 +31,7 @@ const tableData = [
     "2019년": "2020-05-28",
   },
   {
-    항목: "신고안내유형",
+    항목: "Report Type",
     "2023년": "-",
     "2022년": "-",
     "2021년": "-",
@@ -39,151 +39,151 @@ const tableData = [
     "2019년": "-",
   },
   {
-    항목: "기장의무구분",
-    "2023년": "간편장부대상자",
-    "2022년": "간편장부대상자",
-    "2021년": "간편장부대상자",
-    "2020년": "간편장부대상자",
-    "2019년": "간편장부대상자",
+    항목: "Record Type",
+    "2023년": "Simplified Records",
+    "2022년": "Simplified Records",
+    "2021년": "Simplified Records",
+    "2020년": "Simplified Records",
+    "2019년": "Simplified Records",
   },
   {
-    항목: "추계신고시 적용경비율",
-    "2023년": "단순경비율",
-    "2022년": "기준경비율",
-    "2021년": "기준경비율",
-    "2020년": "단순경비율",
-    "2019년": "단순경비율",
+    항목: "Expense Ratio",
+    "2023년": "Simple Expense Ratio",
+    "2022년": "Standard Expense Ratio",
+    "2021년": "Standard Expense Ratio",
+    "2020년": "Simple Expense Ratio",
+    "2019년": "Simple Expense Ratio",
   },
   {
-    항목: "타소득유뮤",
-    "2023년": "근로(단일)",
+    항목: "Other Income",
+    "2023년": "Employment (Single)",
     "2022년": "-",
     "2021년": "-",
     "2020년": "-",
-    "2019년": "근로(단일)",
+    "2019년": "Employment (Single)",
   },
 ];
 
 const tableData2 = [
   {
-    항목: { text: "총수입금액", bold: true },
-    "2023년": { text: "35,300,000원" },
-    "2022년": { text: "35,300,000원" },
-    "2021년": { text: "35,300,000원" },
-    "2020년": { text: "0원" },
-    "2019년": { text: "35,300,000원" },
+    항목: { text: "Total Revenue", bold: true },
+    "2023년": { text: "$35,300,000" },
+    "2022년": { text: "$35,300,000" },
+    "2021년": { text: "$35,300,000" },
+    "2020년": { text: "$0" },
+    "2019년": { text: "$35,300,000" },
   },
   {
-    항목: { text: "3.3% 프리랜서" },
-    "2023년": { text: "35,300,000원", color: "darkBlue" },
-    "2022년": { text: "35,300,000원", color: "darkBlue" },
-    "2021년": { text: "35,300,000원", color: "darkBlue" },
-    "2020년": { text: "0원", color: "darkBlue" },
-    "2019년": { text: "35,300,000원", color: "darkBlue" },
+    항목: { text: "3.3% Freelancer" },
+    "2023년": { text: "$35,300,000", color: "darkBlue" },
+    "2022년": { text: "$35,300,000", color: "darkBlue" },
+    "2021년": { text: "$35,300,000", color: "darkBlue" },
+    "2020년": { text: "$0", color: "darkBlue" },
+    "2019년": { text: "$35,300,000", color: "darkBlue" },
   },
   {
-    항목: { text: "근로소득" },
-    "2023년": { text: "0원", color: "darkBlue" },
-    "2022년": { text: "0원", color: "darkBlue" },
-    "2021년": { text: "0원", color: "darkBlue" },
-    "2020년": { text: "0원", color: "darkBlue" },
-    "2019년": { text: "0원", color: "darkBlue" },
+    항목: { text: "Employment Income" },
+    "2023년": { text: "$0", color: "darkBlue" },
+    "2022년": { text: "$0", color: "darkBlue" },
+    "2021년": { text: "$0", color: "darkBlue" },
+    "2020년": { text: "$0", color: "darkBlue" },
+    "2019년": { text: "$0", color: "darkBlue" },
   },
   {
-    항목: { text: "기타소득" },
-    "2023년": { text: "0원", color: "darkBlue" },
-    "2022년": { text: "0원", color: "darkBlue" },
-    "2021년": { text: "0원", color: "darkBlue" },
-    "2020년": { text: "0원", color: "darkBlue" },
-    "2019년": { text: "0원", color: "darkBlue" },
+    항목: { text: "Other Income" },
+    "2023년": { text: "$0", color: "darkBlue" },
+    "2022년": { text: "$0", color: "darkBlue" },
+    "2021년": { text: "$0", color: "darkBlue" },
+    "2020년": { text: "$0", color: "darkBlue" },
+    "2019년": { text: "$0", color: "darkBlue" },
   },
   {
-    항목: { text: "개인사업자 소득" },
-    "2023년": { text: "0원", color: "darkBlue" },
-    "2022년": { text: "0원", color: "darkBlue" },
-    "2021년": { text: "0원", color: "darkBlue" },
-    "2020년": { text: "0원", color: "darkBlue" },
-    "2019년": { text: "0원", color: "darkBlue" },
+    항목: { text: "Individual Business Income" },
+    "2023년": { text: "$0", color: "darkBlue" },
+    "2022년": { text: "$0", color: "darkBlue" },
+    "2021년": { text: "$0", color: "darkBlue" },
+    "2020년": { text: "$0", color: "darkBlue" },
+    "2019년": { text: "$0", color: "darkBlue" },
   },
   {
-    항목: { text: "필요경비", bold: true },
-    "2023년": { text: "6,000,000원" },
-    "2022년": { text: "6,000,000원" },
-    "2021년": { text: "6,000,000원" },
-    "2020년": { text: "0원" },
-    "2019년": { text: "6,000,000원" },
+    항목: { text: "Required Expenses", bold: true },
+    "2023년": { text: "$6,000,000" },
+    "2022년": { text: "$6,000,000" },
+    "2021년": { text: "$6,000,000" },
+    "2020년": { text: "$0" },
+    "2019년": { text: "$6,000,000" },
   },
   {
-    항목: { text: "3.3% 프리랜서" },
-    "2023년": { text: "6,000,000원" },
-    "2022년": { text: "6,000,000원" },
-    "2021년": { text: "6,000,000원" },
-    "2020년": { text: "0원" },
-    "2019년": { text: "6,000,000원" },
+    항목: { text: "3.3% Freelancer" },
+    "2023년": { text: "$6,000,000" },
+    "2022년": { text: "$6,000,000" },
+    "2021년": { text: "$6,000,000" },
+    "2020년": { text: "$0" },
+    "2019년": { text: "$6,000,000" },
   },
   {
-    항목: { text: "근로소득" },
-    "2023년": { text: "0원" },
-    "2022년": { text: "0원" },
-    "2021년": { text: "0원" },
-    "2020년": { text: "0원" },
-    "2019년": { text: "0원" },
+    항목: { text: "Employment Income" },
+    "2023년": { text: "$0" },
+    "2022년": { text: "$0" },
+    "2021년": { text: "$0" },
+    "2020년": { text: "$0" },
+    "2019년": { text: "$0" },
   },
   {
-    항목: { text: "기타소득" },
-    "2023년": { text: "0원" },
-    "2022년": { text: "0원" },
-    "2021년": { text: "0원" },
-    "2020년": { text: "0원" },
-    "2019년": { text: "0원" },
+    항목: { text: "Other Income" },
+    "2023년": { text: "$0" },
+    "2022년": { text: "$0" },
+    "2021년": { text: "$0" },
+    "2020년": { text: "$0" },
+    "2019년": { text: "$0" },
   },
   {
-    항목: { text: "개인사업자" },
-    "2023년": { text: "0원" },
-    "2022년": { text: "0원" },
-    "2021년": { text: "0원" },
-    "2020년": { text: "0원" },
-    "2019년": { text: "0원" },
+    항목: { text: "Individual Business" },
+    "2023년": { text: "$0" },
+    "2022년": { text: "$0" },
+    "2021년": { text: "$0" },
+    "2020년": { text: "$0" },
+    "2019년": { text: "$0" },
   },
   {
-    항목: { text: "추가 필요경비", bold: true, color: "darkBlue" },
-    "2023년": { text: "0원", isInput: true },
-    "2022년": { text: "0원", isInput: true },
-    "2021년": { text: "0원", isInput: true },
-    "2020년": { text: "0원", isInput: true },
-    "2019년": { text: "0원", isInput: true },
+    항목: { text: "Additional Required Expenses", bold: true, color: "darkBlue" },
+    "2023년": { text: "$0", isInput: true },
+    "2022년": { text: "$0", isInput: true },
+    "2021년": { text: "$0", isInput: true },
+    "2020년": { text: "$0", isInput: true },
+    "2019년": { text: "$0", isInput: true },
   },
   {
-    항목: { text: "(참고: 연말정산 카드총액)" },
-    "2023년": { text: "6,000,000원" },
-    "2022년": { text: "6,000,000원" },
-    "2021년": { text: "6,000,000원" },
-    "2020년": { text: "0원" },
-    "2019년": { text: "6,000,000원" },
+    항목: { text: "(Reference: Year-end Card Total)" },
+    "2023년": { text: "$6,000,000" },
+    "2022년": { text: "$6,000,000" },
+    "2021년": { text: "$6,000,000" },
+    "2020년": { text: "$0" },
+    "2019년": { text: "$6,000,000" },
   },
   {
-    항목: { text: "소득공제", bold: true },
-    "2023년": { text: "35,300,000원", color: "darkBlue" },
-    "2022년": { text: "35,300,000원", color: "darkBlue" },
-    "2021년": { text: "35,300,000원", color: "darkBlue" },
-    "2020년": { text: "0원", color: "darkBlue" },
-    "2019년": { text: "35,300,000원", color: "darkBlue" },
+    항목: { text: "Income Deduction", bold: true },
+    "2023년": { text: "$35,300,000", color: "darkBlue" },
+    "2022년": { text: "$35,300,000", color: "darkBlue" },
+    "2021년": { text: "$35,300,000", color: "darkBlue" },
+    "2020년": { text: "$0", color: "darkBlue" },
+    "2019년": { text: "$35,300,000", color: "darkBlue" },
   },
   {
-    항목: { text: "추가 소득공제", bold: true, color: "darkBlue" },
-    "2023년": { text: "0원", isInput: true },
-    "2022년": { text: "0원", isInput: true },
-    "2021년": { text: "0원", isInput: true },
-    "2020년": { text: "0원", isInput: true },
-    "2019년": { text: "0원", isInput: true },
+    항목: { text: "Additional Income Deduction", bold: true, color: "darkBlue" },
+    "2023년": { text: "$0", isInput: true },
+    "2022년": { text: "$0", isInput: true },
+    "2021년": { text: "$0", isInput: true },
+    "2020년": { text: "$0", isInput: true },
+    "2019년": { text: "$0", isInput: true },
   },
   {
-    항목: { text: "과세표준", bold: true },
-    "2023년": { text: "6,000,000원" },
-    "2022년": { text: "6,000,000원" },
-    "2021년": { text: "6,000,000원" },
-    "2020년": { text: "0원" },
-    "2019년": { text: "6,000,000원" },
+    항목: { text: "Taxable Income", bold: true },
+    "2023년": { text: "$6,000,000" },
+    "2022년": { text: "$6,000,000" },
+    "2021년": { text: "$6,000,000" },
+    "2020년": { text: "$0" },
+    "2019년": { text: "$6,000,000" },
   },
 ];
 
@@ -199,11 +199,18 @@ export default function TaxInfoContent() {
         alignItems="center"
         sx={{
           width: "100%",
-          padding: isMobile ? "0 0 8px 0" : "0 32px",
+          padding: isMobile ? "0px" : "0 32px",
         }}
       >
         <Grid item container spacing={4} pt={2} pb={4}>
           <Section1 theme={theme} />
+
+          <Grid item xs={12}>
+            <Box sx={{ width: "100%", px: 2 }}>
+              <hr style={{ width: "100%", marginTop: "16px" }} />
+            </Box>
+          </Grid>
+
           <Section2 theme={theme} />
         </Grid>
       </Grid>
@@ -219,12 +226,18 @@ const Section1 = ({ theme }) => {
           <FlexRowAlign
             mb={2}
             sx={{
-              justifyContent: "flex-start",
+              justifyContent: "space-between",
+              width: "100%",
               alignItems: "center",
+              flexDirection: "row",
             }}
           >
-            <H6>연도별 신고정보</H6>
+            <H6>Project Analytics Report</H6>
           </FlexRowAlign>
+
+          <Box mb={2}>
+            <H6>Total 6 items</H6>
+          </Box>
 
           <Grid container sx={{ height: "100%" }}>
             <Grid item xs={12} display={"flex"} flexDirection={"column"}>
@@ -236,6 +249,7 @@ const Section1 = ({ theme }) => {
                       borderBottom: `1px solid ${theme.palette.primary.borderColor}`,
                       whiteSpace: "nowrap",
                     },
+                    minWidth: "800px",
                   }}
                 >
                   <TableHead>
@@ -248,13 +262,13 @@ const Section1 = ({ theme }) => {
                           fontWeight: 600,
                         }}
                       >
-                        항목
+                        Item
                       </TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2023년</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2022년</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2021년</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2020년</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2019년</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2023</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2022</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2021</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2020</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2019</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -317,12 +331,18 @@ const Section2 = ({ theme }) => {
           <FlexRowAlign
             mb={2}
             sx={{
-              justifyContent: "flex-start",
+              justifyContent: "space-between",
+              width: "100%",
               alignItems: "center",
+              flexDirection: "row",
             }}
           >
-            <H6>예상세금 자동계산기</H6>
+            <H6>Project Financial Summary</H6>
           </FlexRowAlign>
+
+          <Box mb={2}>
+            <H6>Total 15 items</H6>
+          </Box>
 
           <Grid container sx={{ height: "100%" }}>
             <Grid item xs={12} display={"flex"} flexDirection={"column"}>
@@ -334,6 +354,7 @@ const Section2 = ({ theme }) => {
                       borderBottom: `1px solid ${theme.palette.primary.borderColor}`,
                       whiteSpace: "nowrap",
                     },
+                    minWidth: "800px",
                   }}
                 >
                   <TableHead>
@@ -346,13 +367,13 @@ const Section2 = ({ theme }) => {
                           fontWeight: 600,
                         }}
                       >
-                        항목
+                        Item
                       </TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2023년</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2022년</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2021년</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2020년</TableCell>
-                      <TableCell sx={{ fontWeight: 600 }}>2019년</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2023</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2022</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2021</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2020</TableCell>
+                      <TableCell sx={{ fontWeight: 600 }}>2019</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -371,51 +392,51 @@ const Section2 = ({ theme }) => {
                           sx={{
                             paddingLeft: "24px !important",
                             fontWeight: row.항목.bold ? 600 : 400,
-                            color: row.항목.color
-                              ? theme.palette.primary[row.항목.color]
-                              : "inherit",
+                            color: row.항목.color === "darkBlue" ? theme.palette.primary.darkBlue : "inherit",
                           }}
                         >
                           {row.항목.text}
                         </TableCell>
-                        {["2023년", "2022년", "2021년", "2020년", "2019년"].map(
-                          (year) => (
-                            <TableCell
-                              key={year}
-                              sx={{
-                                fontWeight: row[year].bold ? 600 : 400,
-                                color: row[year].color
-                                  ? theme.palette.primary[row[year].color]
-                                  : "inherit",
-                              }}
-                            >
-                              {row[year].isInput ? (
-                                <Box
-                                  sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: "4px",
-                                  }}
-                                >
-                                  <input
-                                    type="number"
-                                    defaultValue={0}
-                                    style={{
-                                      width: "100px",
-                                      padding: "4px 8px",
-                                      border: `1px solid ${theme.palette.primary.borderColor}`,
-                                      borderRadius: "4px",
-                                    }}
-                                    onChange={(e) => {}}
-                                  />
-                                  <span>원</span>
-                                </Box>
-                              ) : (
-                                row[year].text
-                              )}
-                            </TableCell>
-                          )
-                        )}
+                        <TableCell 
+                          sx={{ 
+                            fontWeight: 400,
+                            color: row["2023년"].color === "darkBlue" ? theme.palette.primary.darkBlue : "inherit",
+                          }}
+                        >
+                          {row["2023년"].text}
+                        </TableCell>
+                        <TableCell 
+                          sx={{ 
+                            fontWeight: 400,
+                            color: row["2022년"].color === "darkBlue" ? theme.palette.primary.darkBlue : "inherit",
+                          }}
+                        >
+                          {row["2022년"].text}
+                        </TableCell>
+                        <TableCell 
+                          sx={{ 
+                            fontWeight: 400,
+                            color: row["2021년"].color === "darkBlue" ? theme.palette.primary.darkBlue : "inherit",
+                          }}
+                        >
+                          {row["2021년"].text}
+                        </TableCell>
+                        <TableCell 
+                          sx={{ 
+                            fontWeight: 400,
+                            color: row["2020년"].color === "darkBlue" ? theme.palette.primary.darkBlue : "inherit",
+                          }}
+                        >
+                          {row["2020년"].text}
+                        </TableCell>
+                        <TableCell 
+                          sx={{ 
+                            fontWeight: 400,
+                            color: row["2019년"].color === "darkBlue" ? theme.palette.primary.darkBlue : "inherit",
+                          }}
+                        >
+                          {row["2019년"].text}
+                        </TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
