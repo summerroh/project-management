@@ -43,6 +43,16 @@ import ChatRoom from "page-sections/insurance-chat/ChatRoom";
 
 const menus = [
   {
+    name: "Projects",
+    url: "/projects",
+    children: [],
+  },
+  {
+    name: "Board",
+    url: "/board",
+    children: [],
+  },
+  {
     name: "Dashboard",
     url: "/dashboard",
     children: [],
@@ -53,18 +63,8 @@ const menus = [
     children: [],
   },
   {
-    name: "Projects",
-    url: "/projects",
-    children: [],
-  },
-  {
     name: "Tax",
     url: "/tax-info",
-    children: [],
-  },
-  {
-    name: "Board",
-    url: "/board",
     children: [],
   },
 ];
@@ -728,19 +728,6 @@ export default function InsuranceHeader(props) {
                       alt={"profile-photo"}
                       sx={{ mr: 0.5, width: 30, height: 30 }}
                     />
-                    <H6 fontWeight={600}>
-                      <NavLink
-                        to={`/dashboard/accountinfo`}
-                        style={{
-                          cursor: "pointer",
-                          whiteSpace: "nowrap",
-                          color: "inherit",
-                          marginLeft: "4px",
-                        }}
-                      >
-                        마이페이지
-                      </NavLink>
-                    </H6>
                   </FlexBox>
                 </IconButton>
               </Box>
@@ -985,19 +972,6 @@ export default function InsuranceHeader(props) {
                           alt={"profile-photo"}
                           sx={{ mr: 0.5, width: 30, height: 30 }}
                         />
-                        <H6 fontWeight={600}>
-                          <NavLink
-                            to={`/dashboard/accountinfo`}
-                            style={{
-                              cursor: "pointer",
-                              whiteSpace: "nowrap",
-                              color: "inherit",
-                              marginLeft: "4px",
-                            }}
-                          >
-                            마이페이지
-                          </NavLink>
-                        </H6>
                       </FlexBox>
                     </IconButton>
                   </Box>

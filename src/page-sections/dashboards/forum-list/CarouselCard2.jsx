@@ -70,7 +70,7 @@ export default function CarouselCard2({}) {
   };
 
   const onForumClick = () => {
-    navigate("/dashboard/forumdetail");
+    navigate("/board");
   };
 
   // Carouse

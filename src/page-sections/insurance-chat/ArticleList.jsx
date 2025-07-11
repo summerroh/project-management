@@ -183,7 +183,7 @@ export default function ArticleList({ imageLink }) {
   };
 
   const onForumClick = () => {
-    navigate("/dashboard/forumdetail");
+    navigate("/board");
   };
 
   // end of select tab to change url logic

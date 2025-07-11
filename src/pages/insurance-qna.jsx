@@ -104,7 +104,7 @@ export default function InsuranceQna() {
                       "&:hover": { backgroundColor: primary.darkBlueHover },
                     }}
                   >
-                    Create Project
+                    Create
                   </Button>
                 </Box>
               </Grid>

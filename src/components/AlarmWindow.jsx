@@ -18,26 +18,18 @@ import FlexBox from "./flexbox/FlexBox";
 const notifications = [
   {
     id: 1,
-    type: "공지사항",
-    title: "시스템 점검 안내",
+    type: "Notice",
+    title: "System Maintenance Notice",
     content:
-      "2023년 7월 1일 오전 2시부터 4시까지 시스템 점검이 있을 예정입니다.",
+      "From July 1, 2023, 2:00 AM to 4:00 AM, there will be a system maintenance.",
     date: new Date(2023, 6, 30, 15, 0),
   },
   {
     id: 2,
-    type: "안내",
-    title: "새로운 기능 업데이트",
-    content: "대시보드에 새로운 분석 도구가 추가되었습니다. 지금 확인해보세요!",
+    type: "Notice",
+    title: "New Feature Update",
+    content: "A new analysis tool has been added to the dashboard. Check it out now!",
     date: new Date(2023, 6, 29, 10, 30),
-  },
-  {
-    id: 3,
-    type: "서비스",
-    title: "고객 지원 센터 운영 시간 변경",
-    content:
-      "7월부터 고객 지원 센터 운영 시간이 오전 9시부터 오후 6시로 변경됩니다.",
-    date: new Date(2023, 6, 28, 17, 45),
   },
 ];
 
@@ -171,14 +163,14 @@ const AlarmWindow = ({ onClose, isExiting }) => {
           alignItems: "center",
         }}
       >
-        <H5>새로운 알림</H5>
+        <H5>Notification</H5>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           {!isMobileOrTablet && (
             <>
               <Tiny
                 sx={{ color: theme.palette.primary.grey, cursor: "pointer" }}
               >
-                모두 읽음으로 표시
+                Mark all as read
               </Tiny>
               <Divider
                 orientation="vertical"
@@ -208,9 +200,9 @@ const AlarmWindow = ({ onClose, isExiting }) => {
           },
         }}
       >
-        <NotificationTab label="전체" />
-        <NotificationTab label="안내" />
-        <NotificationTab label="서비스" />
+        <NotificationTab label="All" />
+        <NotificationTab label="Notice" />
+        <NotificationTab label="Service" />
       </Tabs>
       <Box sx={{ padding: "20px", maxHeight: "400px", overflowY: "auto" }}>
         {showSpecialNotification && (
@@ -246,14 +238,13 @@ const AlarmWindow = ({ onClose, isExiting }) => {
                   !
                 </Tiny>
               </Box>
+              
               <H6 sx={{ fontWeight: 600, mb: 1 }}>
-                재입고 알림 사항 개편 안내
+              Customer Support Center Operating Hours Change
               </H6>
             </FlexBox>
             <H6 sx={{ color: "text.secondary" }}>
-              2024년 9월 30일(월)부터 재입고 알림 사항 서비스가 개편돼요. 상품
-              설정과 알림 신청이 각각의 메뉴로 분리되어 더 직관적으로 이용할 수
-              있어요.
+            From July, the operating hours of the customer support center will change from 9:00 AM to 6:00 PM.
             </H6>
           </SpecialNotification>
         )}
@@ -286,7 +277,7 @@ const AlarmWindow = ({ onClose, isExiting }) => {
           >
             <Bell size={48} color={theme.palette.primary.grey400} />
             <H6 sx={{ color: theme.palette.primary.grey400, mt: 2 }}>
-              새로운 알림이 없어요
+                No new notifications
             </H6>
           </Box>
         )}

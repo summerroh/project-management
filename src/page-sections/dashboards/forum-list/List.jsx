@@ -256,7 +256,7 @@ export default function List({ imageLink }) {
   };
 
   const onForumClick = () => {
-    navigate("/dashboard/forumdetail");
+    navigate("/board");
   };
 
   // select tab to change url logic

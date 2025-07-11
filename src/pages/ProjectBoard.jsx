@@ -1,6 +1,21 @@
-import React, { useState } from "react";
+import {
+  Box,
+  Button,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import FlexBox from "components/flexbox/FlexBox";
+import FlexRowAlign from "components/flexbox/FlexRowAlign";
+import { H5 } from "components/Typography";
+import { Plus } from "lucide-react";
+import MenuPanel from "page-sections/insurance-chat/MenuPanel";
+import { useCallback, useEffect, useState } from "react";
+import { primary } from "theme/colors";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { Box, Card, Typography, Chip, Avatar, Paper, Stack } from "@mui/material";
+import { Card, Chip, Paper, Stack } from "@mui/material";
+import CommentsPanel from "page-sections/insurance-chat/CommentsPanel";
 
 const initialData = {
   columns: {
@@ -85,7 +100,28 @@ const getColumnColor = (col) => {
 };
 
 export default function ProjectBoard() {
+  const theme = useTheme();
+  const isLaptop = useMediaQuery(theme.breakpoints.down("lg"));
+  const [rightPanel, setRightPanel] = useState("comment");
+  const [rightPanelWidth, setRightPanelWidth] = useState(2.5);
+  const [isLeftPanelCollapsed, setIsLeftPanelCollapsed] = useState(false);
+  const [leftPanelWidth, setLeftPanelWidth] = useState(1.5);
   const [data, setData] = useState(initialData);
+
+  useEffect(() => {
+    setLeftPanelWidth(isLeftPanelCollapsed ? 0.4 : 1.5);
+  }, [isLeftPanelCollapsed]);
+
+  const handleResize = useCallback((newWidth) => {
+    setRightPanelWidth(newWidth);
+  }, []);
+
+  const customStyle = {
+    width: "100%",
+    overflow: "hidden",
+  };
+
+  const navbarHeight = 116;
 
   const onDragEnd = (result) => {
     const { source, destination } = result;
@@ -133,98 +169,180 @@ export default function ProjectBoard() {
   };
 
   return (
-    <Box sx={{ p: 3, background: "#f7f8fa", minHeight: "100vh" }}>
-      <Typography variant="h4" fontWeight={700} mb={3}>
-        Projects
-      </Typography>
-      <DragDropContext onDragEnd={onDragEnd}>
-        <Stack direction="row" spacing={3} alignItems="flex-start">
-          {data.columnOrder.map((colId) => {
-            const col = data.columns[colId];
-            return (
-              <Paper
-                key={colId}
-                sx={{
-                  minWidth: 300,
-                  background: getColumnColor(colId),
-                  p: 2,
-                  borderRadius: 3,
-                  boxShadow: 2,
-                  flex: 1,
-                  maxWidth: 340,
-                }}
-                elevation={0}
-              >
-                <Typography variant="h6" fontWeight={600} mb={2}>
-                  {col.name}
-                </Typography>
-                <Droppable droppableId={colId}>
-                  {(provided, snapshot) => (
-                    <Box
-                      ref={provided.innerRef}
-                      {...provided.droppableProps}
-                      sx={{ minHeight: 80 }}
+    <>
+      <Box sx={customStyle}>
+        <Grid container alignItems={"flex-start"}>
+          <Grid item xs={12} container direction="row" alignItems="flex-start">
+            {/* 왼쪽 패널 */}
+            <Grid
+              item
+              lg={leftPanelWidth}
+              xs={12}
+              order={isLaptop ? 2 : 0}
+              display={"flex"}
+              flexDirection={"row"}
+              sx={{ overflow: "hidden" }}
+            >
+              {/* 왼쪽 메뉴 */}
+              <MenuPanel setIsLeftPanelCollapsed={setIsLeftPanelCollapsed} />
+            </Grid>
+
+            {/* 중간부분 */}
+            <Grid
+              container
+              item
+              lg={12 - leftPanelWidth}
+              xs={12}
+              bgcolor={"white"}
+            >
+              {/* 중간 메뉴 */}
+              <Grid item xs={12}>
+                <Box
+                  sx={{
+                    backgroundColor: theme.palette.primary.white,
+                    padding: "0 1rem",
+                    height: "50px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    borderBottom: `1px solid #E1E1E1`,
+                  }}
+                >
+                  <FlexBox gap={0.6} style={{ cursor: "pointer" }}>
+                    <FlexRowAlign
+                      gap={1}
+                      sx={{
+                        justifyContent: "flex-start",
+                        width: "100%",
+                        alignItems: "center",
+                      }}
                     >
-                      {col.items.map((item, idx) => (
-                        <Draggable
-                          key={item.id}
-                          draggableId={item.id}
-                          index={idx}
-                        >
-                          {(provided, snapshot) => (
-                            <Card
-                              ref={provided.innerRef}
-                              {...provided.draggableProps}
-                              {...provided.dragHandleProps}
-                              sx={{
-                                mb: 2,
-                                p: 2,
-                                borderRadius: 2,
-                                boxShadow: snapshot.isDragging ? 6 : 1,
-                                background: "#fff",
-                                cursor: "grab",
-                                transition: "box-shadow 0.2s",
-                              }}
-                            >
-                              <Typography
-                                variant="subtitle2"
-                                fontWeight={600}
-                                gutterBottom
-                              >
-                                {item.title}
-                              </Typography>
-                              <Stack direction="row" spacing={1} alignItems="center">
-                                <Chip
-                                  label={item.label}
-                                  size="small"
-                                  sx={{
-                                    bgcolor: "#e1bee7",
-                                    color: "#6a1b9a",
-                                    fontWeight: 600,
-                                    fontSize: 12,
-                                  }}
-                                />
-                                <Typography
-                                  variant="caption"
-                                  color="text.secondary"
-                                  sx={{ ml: 1 }}
+                      <H5>Projects</H5>
+                    </FlexRowAlign>
+                  </FlexBox>
+
+                  <Button
+                    variant="contained"
+                    size="small"
+                    startIcon={<Plus size={16} />}
+                    sx={{
+                      backgroundColor: primary.darkBlue,
+                      "&:hover": { backgroundColor: primary.darkBlueHover },
+                    }}
+                  >
+                    Create
+                  </Button>
+                </Box>
+              </Grid>
+
+              {/* 중간 내용 (Kanban Board) */}
+              <Grid item lg={12 - rightPanelWidth} xs={12}>
+                <Box
+                  sx={{
+                    borderBottom: `1px solid #E1E1E1`,
+                    height: `calc(100vh - ${navbarHeight}px)`,
+                    overflow: "auto",
+                  }}
+                >
+                  <DragDropContext onDragEnd={onDragEnd}>
+                    <Stack direction="row" spacing={3} alignItems="flex-start" sx={{ mt: 2 }}>
+                      {data.columnOrder.map((colId) => {
+                        const col = data.columns[colId];
+                        return (
+                          <Paper
+                            key={colId}
+                            sx={{
+                              minWidth: 300,
+                              background: getColumnColor(colId),
+                              p: 2,
+                              borderRadius: 3,
+                              boxShadow: 2,
+                              flex: 1,
+                              maxWidth: 340,
+                            }}
+                            elevation={0}
+                          >
+                            <Typography variant="h6" fontWeight={600} mb={2}>
+                              {col.name}
+                            </Typography>
+                            <Droppable droppableId={colId}>
+                              {(provided, snapshot) => (
+                                <Box
+                                  ref={provided.innerRef}
+                                  {...provided.droppableProps}
+                                  sx={{ minHeight: 80 }}
                                 >
-                                  {item.id}
-                                </Typography>
-                              </Stack>
-                            </Card>
-                          )}
-                        </Draggable>
-                      ))}
-                      {provided.placeholder}
-                    </Box>
-                  )}
-                </Droppable>
-              </Paper>
-            );
-          })}
-        </Stack>
-      </DragDropContext>
-    </Box>
+                                  {col.items.map((item, idx) => (
+                                    <Draggable
+                                      key={item.id}
+                                      draggableId={item.id}
+                                      index={idx}
+                                    >
+                                      {(provided, snapshot) => (
+                                        <Card
+                                          ref={provided.innerRef}
+                                          {...provided.draggableProps}
+                                          {...provided.dragHandleProps}
+                                          sx={{
+                                            mb: 2,
+                                            p: 2,
+                                            borderRadius: 2,
+                                            boxShadow: snapshot.isDragging ? 6 : 1,
+                                            background: "#fff",
+                                            cursor: "grab",
+                                            transition: "box-shadow 0.2s",
+                                          }}
+                                        >
+                                          <Typography
+                                            variant="subtitle2"
+                                            fontWeight={600}
+                                            gutterBottom
+                                          >
+                                            {item.title}
+                                          </Typography>
+                                          <Stack direction="row" spacing={1} alignItems="center">
+                                            <Chip
+                                              label={item.label}
+                                              size="small"
+                                              sx={{
+                                                bgcolor: "#e1bee7",
+                                                color: "#6a1b9a",
+                                                fontWeight: 600,
+                                                fontSize: 12,
+                                              }}
+                                            />
+                                            <Typography
+                                              variant="caption"
+                                              color="text.secondary"
+                                              sx={{ ml: 1 }}
+                                            >
+                                              {item.id}
+                                            </Typography>
+                                          </Stack>
+                                        </Card>
+                                      )}
+                                    </Draggable>
+                                  ))}
+                                  {provided.placeholder}
+                                </Box>
+                              )}
+                            </Droppable>
+                          </Paper>
+                        );
+                      })}
+                    </Stack>
+                  </DragDropContext>
+                </Box>
+              </Grid>
+
+              {/* 오른쪽 패널 (CommentsPanel) */}
+              <Grid item lg={rightPanelWidth} xs={12}>
+                <CommentsPanel setRightPanel={setRightPanel} onResize={handleResize} />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Box>
+    </>
   );
 } 
