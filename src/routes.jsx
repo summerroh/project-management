@@ -23,7 +23,7 @@ const routes = () => {
   return [
     {
       path: "/",
-      element: <Navigate to="/dashboard" replace />,
+      element: <Navigate to="/board" replace />,
     },
     {
       path: "/",
