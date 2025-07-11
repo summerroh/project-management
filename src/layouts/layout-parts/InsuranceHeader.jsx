@@ -209,21 +209,6 @@ export default function InsuranceHeader(props) {
     }
   };
 
-  const [selectedTab, setSelectedTab] = useState(0);
-
-  const handleTabChange = (event, newValue) => {
-    setSelectedTab(newValue);
-    // Navigate to the corresponding URL
-    navigate(menus[newValue].url);
-  };
-
-  const getCurrentMenuIndex = () => {
-    const index = menus.findIndex((menu) =>
-      location.pathname.startsWith(menu.url)
-    );
-    return index !== -1 ? index : 0; // Return 0 (클래스) if no match is found
-  };
-
   const isMenuActive = (menuUrl) => {
     return location.pathname.startsWith(menuUrl);
   };
@@ -454,7 +439,7 @@ export default function InsuranceHeader(props) {
                 alignItems: "center",
               }}
             >
-              {["이용안내", "고객센터", "공지사항"].map((item, index) => (
+              {["Help", "Support", "Notice"].map((item, index) => (
                 <React.Fragment key={index}>
                   <Box
                     component="span"
