@@ -16,7 +16,7 @@ import pin from "assets/icon-pin.svg";
 import view from "assets/view.svg";
 import MySelect from "components/MySelect";
 import ReversePagination from "components/ReversePagination";
-import { H6, Tiny } from "components/Typography";
+import { ButtonText, H6, Small, Tiny } from "components/Typography";
 import FlexBox from "components/flexbox/FlexBox";
 import FlexRowAlign from "components/flexbox/FlexRowAlign";
 import GreySearchBar from "layouts/layout-parts/GreySearchBar";
@@ -272,15 +272,15 @@ export default function ArticleList({ imageLink }) {
               alignItems: "center",
             }}
           >
-            <H6
+            <Small
               sx={{
-                fontWeight: 600,
+                fontWeight: 500,
                 color: theme.palette.primary.grey,
                 cursor: "pointer",
               }}
             >
                               Popular
-            </H6>
+            </Small>
 
             <Box
               sx={{
@@ -291,27 +291,27 @@ export default function ArticleList({ imageLink }) {
               }}
             >
               <img src={check} alt="check" width="11px" />
-              <H6
+              <Small
                 ml={0.5}
                 sx={{
-                  fontWeight: 600,
+                  fontWeight: 500,
                   color: theme.palette.primary.darkBlue,
                 }}
               >
                 Recent
-              </H6>
+              </Small>
             </Box>
 
-            <H6
+            <Small
               mr={1.5}
               sx={{
-                fontWeight: 600,
+                fontWeight: 500,
                 color: theme.palette.primary.grey,
                 cursor: "pointer",
               }}
             >
                               Views
-            </H6>
+            </Small>
           </FlexRowAlign>
 
           <FlexRowAlign gap={1.5}>
@@ -345,26 +345,26 @@ export default function ArticleList({ imageLink }) {
             >
               <Grid container item sm={7}>
                 <Grid item sm={1.9}>
-                  <H6 sx={{ fontWeight: 600, whiteSpace: "nowrap" }}>
+                  <Small sx={{ fontWeight: 600, whiteSpace: "nowrap" }}>
                     Category
-                  </H6>
+                  </Small>
                 </Grid>
                 <Grid item sm={4.1}>
-                  <H6 sx={{ fontWeight: 600 }}>Title</H6>
+                  <Small sx={{ fontWeight: 600 }}>Title</Small>
                 </Grid>
               </Grid>
               <Grid container item sm={5}>
                 <Grid item sm={4.2}>
-                  <H6 sx={{ fontWeight: 600 }}>Author</H6>
+                  <Small sx={{ fontWeight: 600 }}>Author</Small>
                 </Grid>
                 <Grid item sm={2.2}>
-                  <H6 sx={{ fontWeight: 600, textAlign: "left" }}>Likes</H6>
+                  <Small sx={{ fontWeight: 600, textAlign: "left" }}>Likes</Small>
                 </Grid>
                 <Grid item sm={2.3}>
-                  <H6 sx={{ fontWeight: 600 }}>Views</H6>
+                  <Small sx={{ fontWeight: 600 }}>Views</Small>
                 </Grid>
                 <Grid item sm={3}>
-                  <H6 sx={{ fontWeight: 600 }}>Date</H6>
+                  <Small sx={{ fontWeight: 600 }}>Date</Small>
                 </Grid>
               </Grid>
             </Grid>
@@ -490,9 +490,9 @@ const ListFormat = ({
             justifyContent: "center",
           }}
         >
-          <H6
+          <ButtonText
             sx={{
-              fontWeight: item.isAdmin ? 600 : 500,
+              fontWeight: 400,
               overflow: "hidden",
               textOverflow: "ellipsis",
               whiteSpace: "nowrap",
@@ -510,7 +510,7 @@ const ListFormat = ({
                 ({item.numOfComment})
               </span>
             )}
-          </H6>
+          </ButtonText>
         </Box>
       </Grid>
       <Grid
@@ -536,11 +536,11 @@ const ListFormat = ({
           alignItems={"center"}
         >
           <Grid item>
-            <H6 style={{ fontWeight: 500 }}>
-              {`${item.writer}`.length > 5
-                ? `${item.writer}`.substring(0, 5) + "..."
+            <ButtonText style={{ fontWeight: 400 }}>
+              {`${item.writer}`.length > 10
+                ? `${item.writer}`.substring(0, 10) + "..."
                 : `${item.writer}`}
-            </H6>
+            </ButtonText>
           </Grid>
           <Grid
             item
@@ -567,7 +567,7 @@ const ListFormat = ({
                 style={{ marginRight: "4px", marginBottom: "1px" }}
               />
             )}
-            <H6 style={{ fontWeight: 500 }}>{item.likes}</H6>
+            <ButtonText style={{ fontWeight: 400 }}>{item.likes}</ButtonText>
           </Box>
         </Grid>
         <Grid item xs={2} sm={2.2}>
@@ -587,7 +587,7 @@ const ListFormat = ({
                 style={{ marginRight: "4px", marginBottom: "1px" }}
               />
             )}
-            <H6 style={{ fontWeight: 500 }}>{item.views}</H6>
+            <ButtonText style={{ fontWeight: 400 }}>{item.views}</ButtonText>
           </Box>
         </Grid>
         <Grid item xs={3.5} sm={3}>
@@ -606,7 +606,7 @@ const ListFormat = ({
                 style={{ marginRight: "4px", marginBottom: "1px" }}
               />
             )}
-            <H6 style={{ fontWeight: 500 }}>{item.date}</H6>
+            <ButtonText style={{ fontWeight: 400 }}>{item.date}</ButtonText>
           </Box>
         </Grid>
       </Grid>

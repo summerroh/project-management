@@ -97,7 +97,7 @@ export const ButtonText = (props) => {
   const { ellipsis, children, className, ...others } = props;
   return (
     <StyledBox
-      fontSize={15}
+      fontSize={14.5}
       component="h5"
       // lineHeight={1}
       whiteSpace={"nowrap"}
@@ -224,7 +224,7 @@ export const Small = (props) => {
   const { ellipsis, children, className, ...others } = props;
   return (
     <StyledBox
-      fontSize={14.5}
+      fontSize={14}
       component="small"
       fontWeight={400}
       lineHeight={1.6}
