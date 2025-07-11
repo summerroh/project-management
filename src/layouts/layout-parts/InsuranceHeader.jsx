@@ -547,6 +547,7 @@ export default function InsuranceHeader(props) {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  paddingLeft: "16px",
                 }}
               >
                 <NavLink to={`/naver/jiwongumMain2`}>

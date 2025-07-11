@@ -38,6 +38,7 @@ export default function MiddleMenu({ title }) {
           size="small"
           startIcon={<Plus size={16} />}
           sx={{
+            paddingX: "10px",
             backgroundColor: theme.palette.primary.darkBlue,
             "&:hover": { backgroundColor: theme.palette.primary.darkBlueHover },
           }}

@@ -59,6 +59,9 @@ const Section1 = ({ theme }) => {
 
   const getButtonStyle = (index, arrayLength, item, selectedValue) => ({
     height: "40px",
+    paddingX: "10px",
+    fontWeight: 400,
+    fontSize: 13.5,
     borderRadius: 0,
     borderColor: theme.palette.primary.borderColor,
     ...(index === 0 && {

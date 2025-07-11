@@ -260,8 +260,8 @@ export const Tiny = (props) => {
   const { ellipsis, children, className, ...others } = props;
   return (
     <StyledBox
-      fontSize={14}
-      fontWeight={500}
+      fontSize={13}
+      fontWeight={400}
       lineHeight={1.55}
       color={"#808187"}
       component="p"

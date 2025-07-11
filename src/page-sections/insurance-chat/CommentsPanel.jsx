@@ -13,12 +13,10 @@ import {
 } from "@mui/material";
 import avatar5 from "assets/avatar-5.png";
 import FlexBox from "components/flexbox/FlexBox";
-import FlexRowAlign from "components/flexbox/FlexRowAlign";
-import { H6, H7, Tiny } from "components/Typography";
+import { H6, H7, Small, Tiny } from "components/Typography";
 import GreySearchBar from "layouts/layout-parts/GreySearchBar";
-import { History, MessageSquareText, Search, Send, X } from "lucide-react";
-import { useCallback, useRef, useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Send, X } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const navbarHeight = 116;
 
@@ -325,7 +323,7 @@ export default function CommentsPanel({
                   label="All Comments"
                   sx={{
                     padding: "6px 0px 6px 0px",
-                    fontSize: 14.5,
+                    fontSize: 13,
                     color:
                       selectedTab === 0
                         ? theme.palette.primary.violet
@@ -337,9 +335,9 @@ export default function CommentsPanel({
                   }}
                 />
                 <Tab
-                  label="Author Comments"
+                  label="Tag"
                   sx={{
-                    fontSize: 14.5,
+                    fontSize: 13,
                     color:
                       selectedTab === 1
                         ? theme.palette.primary.violet
@@ -394,12 +392,12 @@ export default function CommentsPanel({
                       sx={{ mr: 1 }}
                     />
                     <Box>
-                      <H6>{comment.name}</H6>
-                      <Tiny color="text.secondary">{comment.time}</Tiny>
+                      <Small sx={{ fontWeight: 500 }}>{comment.name}</Small>
+                      <Tiny>{comment.time}</Tiny>
                     </Box>
                   </Box>
                 </Box>
-                <H7 sx={{ textAlign: "left" }}>{comment.content}</H7>
+                <Tiny sx={{ textAlign: "left" }}>{comment.content}</Tiny>
               </FlexBox>
             ))}
           </Box>
