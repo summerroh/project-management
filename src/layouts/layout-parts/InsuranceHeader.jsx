@@ -357,7 +357,7 @@ export default function InsuranceHeader(props) {
                 mr={1}
                 fontWeight={600}
                 color="primary.darkBlue"
-                onClick={() => navigate("/dashboard/accountinfo")}
+                onClick={() => navigate("/dashboard")}
               >
                 마이페이지
               </H6>
@@ -550,7 +550,7 @@ export default function InsuranceHeader(props) {
                   paddingLeft: "16px",
                 }}
               >
-                <NavLink to={`/naver/jiwongumMain2`}>
+                <NavLink to={`/board`}>
                   <H2
                     sx={{ fontWeight: 700, color: theme.palette.primary.dark }}
                   >
