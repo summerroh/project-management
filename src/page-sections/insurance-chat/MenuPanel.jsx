@@ -123,7 +123,7 @@ export default function MenuPanel({ setIsLeftPanelCollapsed }) {
                 onClick={handleLogoClick}
               >
                 <H6 sx={{ color: theme.palette.primary.white }}>
-                  Swift
+                  Syntra
                 </H6>
                 <ChevronDown size={22} color={theme.palette.primary.white} />
               </FlexBox>

@@ -539,7 +539,7 @@ export default function InsuranceHeader(props) {
                   <H2
                     sx={{ fontWeight: 700, color: theme.palette.primary.dark }}
                   >
-                    Swift
+                    Syntra
                   </H2>
                 </NavLink>
               </Box>
@@ -835,7 +835,7 @@ export default function InsuranceHeader(props) {
                             fontWeight: 600,
                           }}
                         >
-                          Swift
+                          Syntra
                         </H6>
                         <ChevronDown
                           size={22}
@@ -1012,7 +1012,7 @@ export default function InsuranceHeader(props) {
             </FlexBox>
             <FlexBox flexDirection={"column"}>
               <Tiny sx={{ color: theme.palette.primary.dark }}>
-                Swift
+              Syntra
               </Tiny>
               <Tiny sx={{ fontWeight: 400 }}>
                 a7f3b9c2-e1d5-4f8a-9b6e-2c8d7f1e0a3x

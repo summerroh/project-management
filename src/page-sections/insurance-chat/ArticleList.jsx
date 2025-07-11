@@ -167,7 +167,7 @@ const forumData = [
   },
 ];
 
-export default function ArticleList({ imageLink }) {
+export default function ArticleList() {
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -322,12 +322,12 @@ export default function ArticleList({ imageLink }) {
               style={{ cursor: "pointer" }}
             />
 
-            <GridIcon
+            {/* <GridIcon
               onClick={() => setFormat("grid")}
               size={22}
               color={theme.palette.primary.grey}
               style={{ cursor: "pointer" }}
-            />
+            /> */}
           </FlexRowAlign>
         </Grid>
       </Grid>
@@ -470,6 +470,7 @@ const ListFormat = ({
             fontSize: "13px",
             fontWeight: 500,
             display: "inline-block",
+            marginBottom: isMobile ? "4px" : "0px",
           }}
         >
           {item.category}
