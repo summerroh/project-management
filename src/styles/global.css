@@ -1,0 +1,153 @@
+body {
+  overflow-x: hidden;
+}
+
+/* Add this CSS to center the items in the headerToolbar */
+.centered-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* :root {
+  --fc-border-color: black;
+  --fc-daygrid-event-dot-width: 5px;
+} */
+
+.sunday-cell {
+  background-color: #f9fafd; /* Background color for Sundays */
+}
+
+.prev,
+.customNext {
+  background-color: transparent !important; /* Remove background color */
+  color: #151515 !important; /* Set arrow color */
+}
+
+/* Center the title */
+.customTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fc .fc-button-primary {
+  background-color: transparent;
+  border-color: transparent;
+  color: #151515;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.4rem;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #f9f9f9;
+}
+
+a {
+  white-space: nowrap;
+}
+
+.MuiButtonBase-root.MuiPickersDay-root.Mui-selected {
+  color: #ffffff;
+  background-color: #024ea2; /* Set your desired background color */
+}
+
+.MuiButtonBase-root.MuiPickersDay-root.Mui-selected:hover {
+  background-color: #024ea2; /* Set your desired background color */
+}
+
+.fc-event:hover,
+.fc-event-start:hover,
+.fc-event-end:hover,
+.fc-event-today:hover,
+.fc-daygrid-event:hover,
+.fc-daygrid-dot-event:hover {
+  background-color: inherit;
+}
+
+.pagination-button {
+  font-size: 13.5px !important;
+  color: #151515;
+  background-color: transparent;
+  border: none;
+  width: 33px;
+  height: 33px;
+  border-radius: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.pagination-button:hover {
+  background-color: #f0f0f0;
+  /* color: black; */
+}
+
+.selected-button {
+  font-size: 13.5px !important;
+  color: #151515;
+  background-color: #eff3f5;
+  border: none;
+  width: 33px;
+  height: 33px;
+  border-radius: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-weight: 600;
+}
+
+input::placeholder {
+  font-weight: 300;
+  font-size: 15.5px;
+  color: #b5b7c0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slider {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 에디터 */
+
+/* 태그 */
+.ql-editor .ql-tag {
+  background-color: grey;
+  color: red;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+/* 이미지 */
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em 0;
+
+  /* Optional: Add a subtle border and rounded corners */
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+
+  max-height: 500px; /* Adjust this value as needed */
+  object-fit: contain;
+}
+/* 에디터 끝 */
+
+/* Toastify Styles` */
+.Toastify__toast {
+  font-size: 13px;
+}

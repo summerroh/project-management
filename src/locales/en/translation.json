@@ -1,0 +1,38 @@
+{
+  "forsea": {
+    "company": {
+      "introduction": {
+        "title": "Company Introduction",
+        "description": "Established in October 2000 in Busan, Korea's largest seafood city, we manage the specialized seafood website www.forsea.co.kr. Through online platforms, we search, collect, organize, and database domestic and international seafood/marine-related materials, trends, statistics, and policies, providing these resources to organizations and companies in need. Additionally, we provide consulting services to seafood companies worldwide based on our accumulated knowledge and extensive experience."
+      },
+      "business": {
+        "title": "Business Guide",
+        "description": "Our organization consists of trade, distribution, IT, and management departments. We handle seafood import and export operations, manage seafood sales within Korea, compile data on Korean seafood industry trends/prices/trade, provide information about Korean seafood companies, and conduct online B2B business through our app and website."
+      }
+    }
+  },
+  "fukunari": {
+    "company": {
+      "introduction": {
+        "title": "Company Introduction",
+        "description": "A seafood company pursuing innovation from production to processing. Fukunari provides the freshest seafood through self-cultivation in Japan's bountiful seas, maintained with innovative freshness preservation technology. As producers, we maximize the benefits of the sea and deliver sustainably cultivated seafood to customers' tables. We consistently manage everything from cultivation to processing and sales to continuously supply safe and reliable products."
+      },
+      "business": {
+        "title": "Business Guide",
+        "description": "Our flagship product, Firesh®, is an innovative technology that greatly extends the shelf life of fresh fish while maintaining freshness, taste, and nutritional value. Fukunari's cultivated fish can be enjoyed anywhere in the world as if it were just caught. From high-end restaurants to hotels and ryokans, Fukunari's products offer both convenience and quality."
+      }
+    }
+  },
+  "common": {
+    "how_to_use": {
+      "title": "How to Use",
+      "description": "Union4C is an innovative seafood trading platform, providing optimal solutions connecting fishermen, merchants, and consumers. Based on years of experience and technical expertise, we strive to improve transparency, efficiency, and reliability in seafood distribution."
+    },
+    "caution": {
+      "title": "Caution",
+      "description": "Union4C is an innovative seafood trading platform, providing optimal solutions connecting fishermen, merchants, and consumers."
+    },
+    "contact": "Contact",
+    "register_consultation": "Register Consultation"
+  }
+}
